@@ -11,7 +11,7 @@ namespace SigningTime
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new SignDictionary();
         }
 
         protected override void OnStart()
