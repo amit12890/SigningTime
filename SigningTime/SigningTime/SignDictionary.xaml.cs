@@ -36,6 +36,7 @@ namespace SigningTime
                 new Sign { Name = "Outside" },
                 new Sign { Name = "Please" },
                 new Sign { Name = "Sorry" },
+                new Sign { Name = "Play" },
                 new Sign { Name = "Water" },
             };
 			
