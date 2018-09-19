@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Plugin.MediaManager.Forms.iOS; // For video playback
 using UIKit;
 
 namespace SigningTime.iOS
@@ -22,6 +23,11 @@ namespace SigningTime.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+
+            // This will initialize the Video View Renderer. Instructions found here:
+            // https://www.youtube.com/watch?v=luDyX0kYzY4&t=133s
+            VideoViewRenderer.Init();
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
