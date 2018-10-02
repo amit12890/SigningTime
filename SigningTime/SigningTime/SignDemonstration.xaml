@@ -17,7 +17,7 @@
                 HorizontalOptions="CenterAndExpand"
                 />
             <Button Text="Play"
-                    Clicked="Button_Clicked"
+                    Clicked="Button_ClickedAsync"
                />
         </StackLayout>
     </ContentPage.Content>

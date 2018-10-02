@@ -157,4 +157,7 @@
       <Name>SigningTime</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\banana.mp4" />
+  </ItemGroup>
 </Project>
