@@ -1,16 +1,23 @@
 ﻿using Plugin.MediaManager;
 using Plugin.MediaManager.Abstractions.Enums;
-using Plugin.MediaManager.Abstractions.Implementations;
 using System;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 using System.Reflection; // For debugging the file system
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials; // For accessing the bundled app data
 
 
+
+/*
+ * Helpful resources:
+ * https://stackoverflow.com/questions/52521401/how-to-play-local-video-file-mp4-in-xamarin-plateform-windos-android-and-io
+ * https://stackoverflow.com/questions/51393561/xamarin-essentials-filesystem-can-you-save-async
+ * iOS file system: https://docs.microsoft.com/en-us/xamarin/ios/app-fundamentals/file-system
+ * .Essentials File System Helpers https://docs.microsoft.com/en-us/xamarin/essentials/file-system-helpers?context=xamarin%2Fxamarin-forms&tabs=ios
+ */
 namespace SigningTime
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -34,32 +41,39 @@ namespace SigningTime
         // https://youtu.be/luDyX0kYzY4?t=7m40s "The file could be embedded in your project."
         private async Task Button_ClickedAsync(object sender, EventArgs e)
         {
+            // Xamarin.Essentials File System Helpers Documentation:
+            // To get the application's directory to store cache data. Cache 
+            // data can be used for any data that needs to persist longer than 
+            // temporary data, but should not be data that is required to 
+            // properly operate.
 
-            // use for debugging, not in released app code!
-            // Check in the Application Output to see if files are being placed there
-            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(SigningTime.SignDemonstration)).Assembly;
-            foreach (var res in assembly.GetManifestResourceNames())
+            using (var stream = await FileSystem.OpenAppPackageFileAsync("banana.mp4"))
             {
-                System.Diagnostics.Debug.WriteLine("found resource: " + res.GetType());
+                // Get the location for the copy of the file
+                var cacheDirectory = FileSystem.CacheDirectory;
+                cacheDirectory += "/banana.mp4";
+
+                using (Stream file = File.Create(cacheDirectory))
+                {
+                    // Size of the buffer to use while writing
+                    byte[] buffer = new byte[8 * 1024];
+                    int len;
+                    // 
+                    while ((len = stream.Read(buffer, 0, buffer.Length)) > 0)
+                    {
+                        file.Write(buffer, 0, len);
+                    }
+                }
             }
 
-            // Gets the path to the video file.
-            string appDirectory = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-            string solutionPath = "SigningTime.video.cracker.mp4";
-            string pathToFile = Path.Combine(appDirectory, solutionPath);
+            // Get the path to the video file
+            var videoClip = FileSystem.CacheDirectory + "/banana.mp4";
+            System.Diagnostics.Debug.WriteLine(videoClip); // Path to video file
+            System.Diagnostics.Debug.WriteLine("Does file exist?: " + File.Exists(videoClip)); // Whether video file actually exists
 
-            var video = new MediaFile
-            {
-                Type = MediaFileType.Audio,
-                Availability = ResourceAvailability.Remote,
-                Url = pathToFile
-            };
+            // Play the video file
+            await CrossMediaManager.Current.Play("file://" + videoClip, MediaFileType.Video);
 
-
-            // Creates new MediaFile object, adds it to the queue and starts playing
-            await CrossMediaManager.Current.Play(video);
-            // await CrossMediaManager.Current.Play(pathToFile, MediaFileType.Video, ResourceAvailability.Remote);
-            // await CrossMediaManager.Current.Play(internetURL, MediaFileType.Video, ResourceAvailability.Remote);
         }
     }
 }

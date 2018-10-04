@@ -153,11 +153,12 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\SigningTime\SigningTime.csproj">
-      <Project>{6926643D-4A29-4DAF-896F-8C4B73CFB1DB}</Project>
+      <Project>{D1CAF2EB-E7FB-4F60-ACB7-9F403294D757}</Project>
       <Name>SigningTime</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\banana.mp4" />
+    <BundleResource Include="Resources\banana.mp4" />
+    <BundleResource Include="Resources\cracker.mp4" />
   </ItemGroup>
 </Project>

@@ -93,12 +93,13 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SigningTime\SigningTime.csproj">
-      <Project>{6926643D-4A29-4DAF-896F-8C4B73CFB1DB}</Project>
+      <Project>{D1CAF2EB-E7FB-4F60-ACB7-9F403294D757}</Project>
       <Name>SigningTime</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Assets\banana.mp4" />
+    <AndroidAsset Include="Assets\cracker.mp4" />
+    <AndroidAsset Include="Assets\banana.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

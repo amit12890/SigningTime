@@ -11,16 +11,14 @@
 
   <ItemGroup>
     <None Remove="video\cracker.mp4" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="video\banana.mp4" />
-    <EmbeddedResource Include="video\cracker.mp4" />
+    <None Remove="video\banana.mp4" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Plugin.MediaManager.Forms" Version="0.4.5" />
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+    <PackageReference Include="PCLStorage" Version="1.0.2" />
+    <PackageReference Include="Xamarin.Essentials" Version="0.10.0-preview" />
   </ItemGroup>
 
   <ItemGroup>

@@ -26,6 +26,8 @@ namespace SigningTime.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLStorage.Resource.String.ApplicationName = global::SigningTime.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::SigningTime.Droid.Resource.String.Hello;
 			global::Plugin.MediaManager.Forms.Android.Resource.Animation.abc_fade_in = global::SigningTime.Droid.Resource.Animation.abc_fade_in;
 			global::Plugin.MediaManager.Forms.Android.Resource.Animation.abc_fade_out = global::SigningTime.Droid.Resource.Animation.abc_fade_out;
 			global::Plugin.MediaManager.Forms.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::SigningTime.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
