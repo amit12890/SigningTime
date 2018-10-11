@@ -100,6 +100,35 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\cracker.mp4" />
     <AndroidAsset Include="Assets\banana.mp4" />
+    <AndroidAsset Include="Assets\again.mp4" />
+    <AndroidAsset Include="Assets\all done.mp4" />
+    <AndroidAsset Include="Assets\baby.mp4" />
+    <AndroidAsset Include="Assets\bath.mp4" />
+    <AndroidAsset Include="Assets\bird.mp4" />
+    <AndroidAsset Include="Assets\book.mp4" />
+    <AndroidAsset Include="Assets\cat.mp4" />
+    <AndroidAsset Include="Assets\cereal.mp4" />
+    <AndroidAsset Include="Assets\dad.mp4" />
+    <AndroidAsset Include="Assets\diaper.mp4" />
+    <AndroidAsset Include="Assets\dog.mp4" />
+    <AndroidAsset Include="Assets\dream.mp4" />
+    <AndroidAsset Include="Assets\drink.mp4" />
+    <AndroidAsset Include="Assets\eat.mp4" />
+    <AndroidAsset Include="Assets\fish.mp4" />
+    <AndroidAsset Include="Assets\frog.mp4" />
+    <AndroidAsset Include="Assets\grandma.mp4" />
+    <AndroidAsset Include="Assets\grandpa.mp4" />
+    <AndroidAsset Include="Assets\horse.mp4" />
+    <AndroidAsset Include="Assets\hurt.mp4" />
+    <AndroidAsset Include="Assets\juice.mp4" />
+    <AndroidAsset Include="Assets\love.mp4" />
+    <AndroidAsset Include="Assets\milk.mp4" />
+    <AndroidAsset Include="Assets\mom.mp4" />
+    <AndroidAsset Include="Assets\more.mp4" />
+    <AndroidAsset Include="Assets\new.mp4" />
+    <AndroidAsset Include="Assets\potty.mp4" />
+    <AndroidAsset Include="Assets\water.mp4" />
+    <AndroidAsset Include="Assets\car.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

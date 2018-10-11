@@ -19,6 +19,7 @@ namespace SigningTime
             InitializeComponent();
 
             // TODO: Add other stuff associated to the signs, particularly the videos
+            // Signs that are commented out don't have a video clip for them
             ListOfSigns = new ObservableCollection<Sign>
             {
                 new Sign { Name = "Baby" },
@@ -31,7 +32,7 @@ namespace SigningTime
                 new Sign { Name = "Dad" },
                 new Sign { Name = "Diaper" },
                 new Sign { Name = "Dog" },
-                new Sign { Name = "Dreams" },
+                new Sign { Name = "Dream" },
                 new Sign { Name = "Drink" },
                 new Sign { Name = "Eat" },
                 new Sign { Name = "Finished" },
@@ -41,21 +42,21 @@ namespace SigningTime
                 new Sign { Name = "Grandpa" },
                 new Sign { Name = "Horse" },
                 new Sign { Name = "Hurt" },
-                new Sign { Name = "I Love You" },
+                //new Sign { Name = "I Love You" },
                 new Sign { Name = "Juice" },
                 new Sign { Name = "Love" },
-                new Sign { Name = "Many" },
+                //new Sign { Name = "Many" },
                 new Sign { Name = "Milk" },
                 new Sign { Name = "Mom" },
                 new Sign { Name = "More" },
                 new Sign { Name = "New" },
-                new Sign { Name = "Now" },
+                //new Sign { Name = "Now" },
                 new Sign { Name = "Potty" },
-                new Sign { Name = "Signing" },
-                new Sign { Name = "Special" },
-                new Sign { Name = "Spirit" },
-                new Sign { Name = "Sweet" },
-                new Sign { Name = "Talent" },
+                //new Sign { Name = "Signing" },
+                //new Sign { Name = "Special" },
+                //new Sign { Name = "Spirit" },
+                //new Sign { Name = "Sweet" },
+                //new Sign { Name = "Talent" },
                 new Sign { Name = "Time" },
                 new Sign { Name = "Water" },
                 new Sign { Name = "Where" },

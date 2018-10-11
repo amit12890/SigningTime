@@ -24,8 +24,6 @@ namespace SigningTime
     public partial class SignDemonstration : ContentPage
     {
 
-        string internetURL = "https://ia800201.us.archive.org/12/items/BigBuckBunny_328/BigBuckBunny_512kb.mp4";
-
         public SignDemonstration(Sign tappedSign)
         {
             if (tappedSign == null)
@@ -35,45 +33,53 @@ namespace SigningTime
 
             BindingContext = tappedSign;
 
+            // Copy the video to the cache directory for playback
+            setUpVideoFile(tappedSign.Name.ToLower() + ".mp4");
+
             InitializeComponent();
         }
 
-        // https://youtu.be/luDyX0kYzY4?t=7m40s "The file could be embedded in your project."
         private async Task Button_ClickedAsync(object sender, EventArgs e)
         {
-            // Xamarin.Essentials File System Helpers Documentation:
-            // To get the application's directory to store cache data. Cache 
-            // data can be used for any data that needs to persist longer than 
-            // temporary data, but should not be data that is required to 
-            // properly operate.
+            // Get the path to the video file
+            var videoClip = FileSystem.CacheDirectory + "/video.mp4";
 
-            using (var stream = await FileSystem.OpenAppPackageFileAsync("banana.mp4"))
+            // Debugging stuff
+            System.Diagnostics.Debug.WriteLine(videoClip); // Path to video file
+            System.Diagnostics.Debug.WriteLine("Does file exist?: " + File.Exists(videoClip)); // Whether video file actually exists
+            System.Diagnostics.Debug.WriteLine(new FileInfo(videoClip).Length); // Size of file
+
+            // Play the video file
+            await CrossMediaManager.Current.Play("file://" + videoClip, MediaFileType.Video);
+
+        }
+
+        /*
+         * Sets up the correct video to be played by this screen. Essentially, each
+         * platform has a bundled in set of resource/asset files, but they need to
+         * be relocated in order to be accessed. This function copies them over
+         * to the cache folder associated with each platform. This allows the 
+         * CrossMediaManager to accept a direct "URL" path to the clip.
+         */
+        private async void setUpVideoFile(String videoFileName)
+        {
+            using (var stream = await FileSystem.OpenAppPackageFileAsync(videoFileName))
             {
                 // Get the location for the copy of the file
                 var cacheDirectory = FileSystem.CacheDirectory;
-                cacheDirectory += "/banana.mp4";
+                cacheDirectory += "/video.mp4";
 
                 using (Stream file = File.Create(cacheDirectory))
                 {
                     // Size of the buffer to use while writing
                     byte[] buffer = new byte[8 * 1024];
                     int len;
-                    // 
                     while ((len = stream.Read(buffer, 0, buffer.Length)) > 0)
                     {
                         file.Write(buffer, 0, len);
                     }
                 }
             }
-
-            // Get the path to the video file
-            var videoClip = FileSystem.CacheDirectory + "/banana.mp4";
-            System.Diagnostics.Debug.WriteLine(videoClip); // Path to video file
-            System.Diagnostics.Debug.WriteLine("Does file exist?: " + File.Exists(videoClip)); // Whether video file actually exists
-
-            // Play the video file
-            await CrossMediaManager.Current.Play("file://" + videoClip, MediaFileType.Video);
-
         }
     }
 }

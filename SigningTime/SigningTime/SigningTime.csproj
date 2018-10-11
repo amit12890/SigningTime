@@ -12,6 +12,13 @@
   <ItemGroup>
     <None Remove="video\cracker.mp4" />
     <None Remove="video\banana.mp4" />
+    <None Remove="videos\again.mp4" />
+    <None Remove="videos\all done.mp4" />
+    <None Remove="videos\baby.mp4" />
+    <None Remove="videos\banana.mp4" />
+    <None Remove="videos\bath.mp4" />
+    <None Remove="videos\bird.mp4" />
+    <None Remove="videos\book.mp4" />
   </ItemGroup>
 
   <ItemGroup>
