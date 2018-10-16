@@ -22,6 +22,7 @@ namespace SigningTime
             // Signs that are commented out don't have a video clip for them
             ListOfSigns = new ObservableCollection<Sign>
             {
+                new Sign { Name = "Again" },
                 new Sign { Name = "Baby" },
                 new Sign { Name = "Banana" },
                 new Sign { Name = "Bird" },
@@ -41,7 +42,7 @@ namespace SigningTime
                 new Sign { Name = "Grandma" },
                 new Sign { Name = "Grandpa" },
                 new Sign { Name = "Horse" },
-                new Sign { Name = "Hurt" },
+                new Sign { Name = "Hurt" }, // LONDER THAN 15sec
                 //new Sign { Name = "I Love You" },
                 new Sign { Name = "Juice" },
                 new Sign { Name = "Love" },
@@ -57,9 +58,9 @@ namespace SigningTime
                 //new Sign { Name = "Spirit" },
                 //new Sign { Name = "Sweet" },
                 //new Sign { Name = "Talent" },
-                new Sign { Name = "Time" },
+                //new Sign { Name = "Time" },
                 new Sign { Name = "Water" },
-                new Sign { Name = "Where" },
+                new Sign { Name = "Where" }, // TODO: NEED THIS VIDEO DOWNLOADED
             };
 			
 			MyListView.ItemsSource = ListOfSigns;

@@ -55,6 +55,9 @@
     <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
+    <PackageReference Include="Octane.Xam.VideoPlayer">
+      <Version>2.2.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -83,6 +86,37 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\baby.mp4" />
+    <AndroidResource Include="Resources\drawable\banana.mp4" />
+    <AndroidResource Include="Resources\drawable\bath.mp4" />
+    <AndroidResource Include="Resources\drawable\bird.mp4" />
+    <AndroidResource Include="Resources\drawable\book.mp4" />
+    <AndroidResource Include="Resources\drawable\car.mp4" />
+    <AndroidResource Include="Resources\drawable\cat.mp4" />
+    <AndroidResource Include="Resources\drawable\cereal.mp4" />
+    <AndroidResource Include="Resources\drawable\cracker.mp4" />
+    <AndroidResource Include="Resources\drawable\dad.mp4" />
+    <AndroidResource Include="Resources\drawable\diaper.mp4" />
+    <AndroidResource Include="Resources\drawable\dog.mp4" />
+    <AndroidResource Include="Resources\drawable\dream.mp4" />
+    <AndroidResource Include="Resources\drawable\drink.mp4" />
+    <AndroidResource Include="Resources\drawable\eat.mp4" />
+    <AndroidResource Include="Resources\drawable\finished.mp4" />
+    <AndroidResource Include="Resources\drawable\fish.mp4" />
+    <AndroidResource Include="Resources\drawable\frog.mp4" />
+    <AndroidResource Include="Resources\drawable\grandma.mp4" />
+    <AndroidResource Include="Resources\drawable\grandpa.mp4" />
+    <AndroidResource Include="Resources\drawable\horse.mp4" />
+    <AndroidResource Include="Resources\drawable\hurt.mp4" />
+    <AndroidResource Include="Resources\drawable\juice.mp4" />
+    <AndroidResource Include="Resources\drawable\love.mp4" />
+    <AndroidResource Include="Resources\drawable\milk.mp4" />
+    <AndroidResource Include="Resources\drawable\mom.mp4" />
+    <AndroidResource Include="Resources\drawable\more.mp4" />
+    <AndroidResource Include="Resources\drawable\new_new.mp4" />
+    <AndroidResource Include="Resources\drawable\potty.mp4" />
+    <AndroidResource Include="Resources\drawable\water.mp4" />
+    <AndroidResource Include="Resources\drawable\again.mp4" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
@@ -96,39 +130,6 @@
       <Project>{D1CAF2EB-E7FB-4F60-ACB7-9F403294D757}</Project>
       <Name>SigningTime</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\cracker.mp4" />
-    <AndroidAsset Include="Assets\banana.mp4" />
-    <AndroidAsset Include="Assets\again.mp4" />
-    <AndroidAsset Include="Assets\all done.mp4" />
-    <AndroidAsset Include="Assets\baby.mp4" />
-    <AndroidAsset Include="Assets\bath.mp4" />
-    <AndroidAsset Include="Assets\bird.mp4" />
-    <AndroidAsset Include="Assets\book.mp4" />
-    <AndroidAsset Include="Assets\cat.mp4" />
-    <AndroidAsset Include="Assets\cereal.mp4" />
-    <AndroidAsset Include="Assets\dad.mp4" />
-    <AndroidAsset Include="Assets\diaper.mp4" />
-    <AndroidAsset Include="Assets\dog.mp4" />
-    <AndroidAsset Include="Assets\dream.mp4" />
-    <AndroidAsset Include="Assets\drink.mp4" />
-    <AndroidAsset Include="Assets\eat.mp4" />
-    <AndroidAsset Include="Assets\fish.mp4" />
-    <AndroidAsset Include="Assets\frog.mp4" />
-    <AndroidAsset Include="Assets\grandma.mp4" />
-    <AndroidAsset Include="Assets\grandpa.mp4" />
-    <AndroidAsset Include="Assets\horse.mp4" />
-    <AndroidAsset Include="Assets\hurt.mp4" />
-    <AndroidAsset Include="Assets\juice.mp4" />
-    <AndroidAsset Include="Assets\love.mp4" />
-    <AndroidAsset Include="Assets\milk.mp4" />
-    <AndroidAsset Include="Assets\mom.mp4" />
-    <AndroidAsset Include="Assets\more.mp4" />
-    <AndroidAsset Include="Assets\new.mp4" />
-    <AndroidAsset Include="Assets\potty.mp4" />
-    <AndroidAsset Include="Assets\water.mp4" />
-    <AndroidAsset Include="Assets\car.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
