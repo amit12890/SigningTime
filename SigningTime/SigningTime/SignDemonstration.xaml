@@ -12,6 +12,7 @@
                 HorizontalOptions="CenterAndExpand" />
             <o:VideoPlayer Source="https://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4"
                            AutoPlay="True"
+                           HeightRequest="180"
                            x:Name="video_player"/>
             <Button Text="Play"
                     x:Name="play_button"

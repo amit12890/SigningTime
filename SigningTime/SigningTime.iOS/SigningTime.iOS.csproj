@@ -160,40 +160,4 @@
       <Name>SigningTime</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\banana.mp4" />
-    <BundleResource Include="Resources\cracker.mp4" />
-    <BundleResource Include="Resources\again.mp4" />
-    <BundleResource Include="Resources\finished.mp4" />
-    <BundleResource Include="Resources\baby.mp4" />
-    <BundleResource Include="Resources\bath.mp4" />
-    <BundleResource Include="Resources\bird.mp4" />
-    <BundleResource Include="Resources\book.mp4" />
-    <BundleResource Include="Resources\car.mp4" />
-    <BundleResource Include="Resources\cat.mp4" />
-    <BundleResource Include="Resources\cereal.mp4" />
-    <BundleResource Include="Resources\dad.mp4" />
-    <BundleResource Include="Resources\diaper.mp4" />
-    <BundleResource Include="Resources\dog.mp4" />
-    <BundleResource Include="Resources\dream.mp4" />
-    <BundleResource Include="Resources\drink.mp4" />
-    <BundleResource Include="Resources\eat.mp4" />
-    <BundleResource Include="Resources\fish.mp4" />
-    <BundleResource Include="Resources\frog.mp4" />
-    <BundleResource Include="Resources\grandma.mp4" />
-    <BundleResource Include="Resources\grandpa.mp4" />
-    <BundleResource Include="Resources\horse.mp4" />
-    <BundleResource Include="Resources\hurt.mp4" />
-    <BundleResource Include="Resources\juice.mp4" />
-    <BundleResource Include="Resources\love.mp4" />
-    <BundleResource Include="Resources\milk.mp4" />
-    <BundleResource Include="Resources\mom.mp4" />
-    <BundleResource Include="Resources\more.mp4" />
-    <BundleResource Include="Resources\new.mp4" />
-    <BundleResource Include="Resources\potty.mp4" />
-    <BundleResource Include="Resources\water.mp4" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-  </ItemGroup>
 </Project>
