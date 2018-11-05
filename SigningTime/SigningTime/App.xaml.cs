@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,14 +8,21 @@ namespace SigningTime
 {
     public partial class App : Application
     {
+
         public App()
         {
+            // Loads and parses the associated XAML
             InitializeComponent();
 
-            // MainPage is a property of the base "Application" class (seen above).
-            // And we use it to set the starting page of our application.
-            // Currently set to start at the list of signs.
-            MainPage = new NavigationPage(new SignDictionary());
+            // MainPage is a property of the base Application class. It's used 
+            // to set the starting (root) page of our application.
+            //
+            // NavigationPage sets the page into something that can be
+            // added to the navigation stack. Allows the back arrow in the 
+            // Navigation Bar.
+            //MainPage = new NavigationPage(new SignDictionary());
+
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
@@ -31,5 +39,6 @@ namespace SigningTime
         {
             // Handle when your app resumes
         }
+
     }
 }

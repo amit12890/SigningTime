@@ -74,7 +74,9 @@ namespace SigningTime
         async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e.Item == null)
+            {
                 return;
+            }
 
             // Get the sign that was tapped
             Sign tappedSign = e.Item as Sign;
@@ -83,7 +85,7 @@ namespace SigningTime
             // It pushes the SignDemonstration class/page onto the "stack" of navigable pages for the back button.
             await Navigation.PushAsync(new SignDemonstration(tappedSign));
 
-            //Deselect Item (So it doesn't remain selected after tap)
+            // Deselect Item (So it doesn't remain selected after tap)
             ((ListView)sender).SelectedItem = null;
         }
 

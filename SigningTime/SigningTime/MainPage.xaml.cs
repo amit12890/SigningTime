@@ -7,11 +7,14 @@ using Xamarin.Forms;
 
 namespace SigningTime
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : TabbedPage
     {
         public MainPage()
         {
             InitializeComponent();
+
+            // The children are the pages that will appear in tabs
+            this.Children.Add(new NavigationPage(new SignDictionary()));
         }
     }
 }

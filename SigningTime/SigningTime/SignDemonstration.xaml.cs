@@ -23,11 +23,13 @@ namespace SigningTime
 
         public SignDemonstration(Sign tappedSign)
         {
+            // Make sure the Sign object
             if (tappedSign == null)
             {
                 throw new ArgumentNullException();
             }
 
+            // BindingContexts allow the object to be used within the XAML file
             BindingContext = tappedSign;
 
             InitializeComponent();

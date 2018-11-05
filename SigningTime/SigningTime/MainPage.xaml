@@ -1,14 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:SigningTime"
-             x:Class="SigningTime.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SigningTime"
+    x:Class="SigningTime.MainPage">
+    
+    <!-- The Dictionary list of signs -->
+    <NavigationPage Title="Dictionary" >
+        <x:Arguments>
+            <local:SignDictionary />
+        </x:Arguments>
+    </NavigationPage>
+    
+    <!-- Flashcards -->
+    <ContentPage Title="Flash Cards">
+        <Label Text="Here's where flash cards will go" HorizontalOptions="Center" VerticalOptions="Center" />
+    </ContentPage>
+    
+    <!--Quiz -->
+    <ContentPage Title="Quiz">
+         <Label Text="Here's where the quiz will go" HorizontalOptions="Center" VerticalOptions="Center" />
+    </ContentPage>
+    
+    <!-- Information -->
+    <ContentPage Title="About">
+         <Label Text="Here's where other information will go" HorizontalOptions="Center" VerticalOptions="Center" />
+    </ContentPage>
+    
+             
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
-</ContentPage>
+</TabbedPage>
