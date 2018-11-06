@@ -85,6 +85,23 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\baseline_book_24.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_book_black_18.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_book_black_24.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_book_black_36.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_book_black_48.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\baseline_book_black_18.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\baseline_book_black_24.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\baseline_book_black_36.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\baseline_book_black_48.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\baseline_book_black_18.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\baseline_book_black_24.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\baseline_book_black_36.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\baseline_book_black_48.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\baseline_book_black_18.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\baseline_book_black_24.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\baseline_book_black_36.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\baseline_book_black_48.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
