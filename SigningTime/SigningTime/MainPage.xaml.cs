@@ -12,9 +12,6 @@ namespace SigningTime
         public MainPage()
         {
             InitializeComponent();
-
-            // The children are the pages that will appear in tabs
-            this.Children.Add(new NavigationPage(new SignDictionary()));
         }
     }
 }
