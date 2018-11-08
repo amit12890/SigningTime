@@ -22,7 +22,7 @@ namespace SigningTime
             // Navigation Bar.
             //MainPage = new NavigationPage(new SignDictionary());
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage (new MainPage());
         }
 
         protected override void OnStart()

@@ -81,8 +81,10 @@ namespace SigningTime
             // Get the sign that was tapped
             Sign tappedSign = e.Item as Sign;
 
-            // Each 'ContentPage' has a 'Navigation' property. This creates the new page you wish to view.
-            // It pushes the SignDemonstration class/page onto the "stack" of navigable pages for the back button.
+            // Each 'ContentPage' has a 'Navigation' property. This creates the 
+            // new page you wish to view. It pushes the SignDemonstration 
+            // class/page onto the "stack" of navigable pages for the back 
+            // button.
             await Navigation.PushAsync(new SignDemonstration(tappedSign));
 
             // Deselect Item (So it doesn't remain selected after tap)
