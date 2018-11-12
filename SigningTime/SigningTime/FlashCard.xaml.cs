@@ -12,14 +12,28 @@ namespace SigningTime
 {
     public partial class FlashCard : ContentPage
     {
-        async void SignDemonstration(object sender, System.EventArgs e)
+
+        private Sign sign;
+
+        public FlashCard(Sign sign, int cardNumber)
         {
-            await Navigation.PushAsync(new SignDemonstration(new Sign { Name = "Eat" }));
+            this.sign = sign;
+
+            InitializeComponent();
+
+            // Sets up the current Page with correct values
+            signName.Text = sign.Name.ToUpper() + " (card: " + cardNumber + ")";
+            // signDescription.Text = sign.Description;
+            signImage.Source = sign.Name;
         }
 
-        public FlashCard()
+        /// <summary>
+        /// Launches the SignDemonstration page for this sign
+        /// </summary>
+        async void SignDemonstration(object sender, System.EventArgs e)
         {
-            InitializeComponent();
+            await Navigation.PushAsync(new SignDemonstration(sign));
         }
+
     }
 }

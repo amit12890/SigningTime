@@ -42,7 +42,7 @@ namespace SigningTime
                 new Sign { Name = "Grandma" },
                 new Sign { Name = "Grandpa" },
                 new Sign { Name = "Horse" },
-                new Sign { Name = "Hurt" }, // LONGESR THAN 15sec
+                new Sign { Name = "Hurt" }, // LONGER THAN 15sec
                 //new Sign { Name = "I Love You" },
                 new Sign { Name = "Juice" },
                 new Sign { Name = "Love" },

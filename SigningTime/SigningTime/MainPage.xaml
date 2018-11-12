@@ -9,7 +9,7 @@
     <!-- The Dictionary list of signs -->
     <NavigationPage Title="Dictionary" Icon="DictionaryIcon">
         <x:Arguments>
-            <local:SignDictionary />
+            <local:SignDictionary/>
         </x:Arguments>
     </NavigationPage>
     
