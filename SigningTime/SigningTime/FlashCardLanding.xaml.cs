@@ -17,7 +17,7 @@ namespace SigningTime
         */
         private async void StartSlides(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new NavigationPage (new FlashCard()));
+            await Navigation.PushAsync(new FlashCardCarousel());
         }
     }
 }

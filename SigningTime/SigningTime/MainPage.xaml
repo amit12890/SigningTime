@@ -5,6 +5,7 @@
     xmlns:local="clr-namespace:SigningTime"
     x:Class="SigningTime.MainPage">
     
+    <!-- NavigationPage needs a root page, so it takes the argument -->
     <!-- The Dictionary list of signs -->
     <NavigationPage Title="Dictionary" Icon="DictionaryIcon">
         <x:Arguments>
@@ -13,7 +14,12 @@
     </NavigationPage>
     
     <!-- Flashcards -->
-   <local:FlashCardLanding Title="Flash Cards" Icon="FlashIcon"/>
+    <NavigationPage Title="Flash Cards" Icon="FlashIcon">
+        <x:Arguments>
+            <local:FlashCardLanding />
+        </x:Arguments>
+    </NavigationPage>
+    
     
     <!--Quiz -->
     <ContentPage Title="Quiz" Icon="QuizIcon">

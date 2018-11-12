@@ -99,4 +99,7 @@
   <ItemGroup>
     <Folder Include="videos\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="FlashCards.xaml.cs" />
+  </ItemGroup>
 </Project>
