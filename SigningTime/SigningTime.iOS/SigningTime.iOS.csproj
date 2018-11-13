@@ -188,6 +188,8 @@
     <ImageAsset Include="Assets.xcassets\Love.imageset\MISSING.png" />
     <ImageAsset Include="Assets.xcassets\Water.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Water.imageset\MISSING.png" />
+    <ImageAsset Include="Assets.xcassets\splash_screen.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\splash_screen.imageset\logo1024.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -254,5 +256,6 @@
     <Folder Include="Assets.xcassets\Juice.imageset\" />
     <Folder Include="Assets.xcassets\Love.imageset\" />
     <Folder Include="Assets.xcassets\Water.imageset\" />
+    <Folder Include="Assets.xcassets\splash_screen.imageset\" />
   </ItemGroup>
 </Project>
