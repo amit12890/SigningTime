@@ -62,7 +62,7 @@ namespace SigningTime
             // Create a flash card page for each sign and add it to the carousel
             for (int i = 0; i < allSigns.Count; i++)
             {
-                FlashCard flashCardPage = new FlashCard(allSigns[i], i+1);
+                FlashCard flashCardPage = new FlashCard(allSigns[i], i + 1);
                 Children.Add(flashCardPage);
             }
 

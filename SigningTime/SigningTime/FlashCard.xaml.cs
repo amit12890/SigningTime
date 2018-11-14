@@ -24,7 +24,15 @@ namespace SigningTime
             // Sets up the current Page with correct values
             signName.Text = sign.Name.ToUpper() + " (card: " + cardNumber + ")";
             // signDescription.Text = sign.Description;
-            signImage.Source = sign.Name;
+
+            // Can't have a resoruce image file with name "new", so need to
+            // handle when the new sign and add '_' to the name for the img file
+            if(sign.Name.Equals("New")){
+                signImage.Source = sign.Name.ToLower() + "_";
+            }
+            else{
+                signImage.Source = sign.Name.ToLower();
+            }
         }
 
         /// <summary>
