@@ -7,5 +7,6 @@ namespace SigningTime
     public class Sign
     {
         public string Name { get; set; }
+        public string Description { get; set; }
     }
 }

@@ -2,25 +2,43 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="SigningTime.FlashCard"
-             BackgroundColor="#FEF7DD">
-    <ContentPage.Content >
-        <StackLayout
-            HorizontalOptions="Center"
-            VerticalOptions="Center">
-            
-            <Label Text="EAT"
-                   x:Name="signName"
-                   FontSize="Large"
-                   TextColor="#F07983"
-                   HorizontalOptions="Center" />
-            <Label Text="Tap your fingers to your mouth a few times, just like you're going to eat something. It's also the sign for food."
-                   x:Name="signDescription"
-                   Margin="50"/>
-            <Image Source="Eat" 
-                   x:Name="signImage"/>
-            <Button Text="Watch Video of Sign"
-                    Clicked="SignDemonstration" />
-            
-        </StackLayout>
-    </ContentPage.Content>
+             BackgroundColor="#FFFFFF"
+             Padding="20">
+    
+    <StackLayout x:Name="wholePage"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        BackgroundColor="#FEF7DD">
+        
+        <Label Text="EAT"
+               x:Name="signName"
+               FontSize="Large"
+               TextColor="#F07983"
+               HorizontalOptions="Center" />
+        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua."
+               x:Name="signDescription"
+               Margin="50"/>
+        <Image Source="Eat" 
+               x:Name="signImage"/>
+        <Button Text="Watch Video of Sign"
+               Clicked="SignDemonstration" />
+        
+        <Button Text="Flip"
+               Clicked="FlipCard" />
+    </StackLayout>
+    
+    <!--
+    <RelativeLayout>
+        <BoxView Color="#F38C91"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=1}" 
+                 RelativeLayout.HeightConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Height,
+                    Factor=0.5}" />
+    </RelativeLayout>
+    -->
+    
 </ContentPage>
