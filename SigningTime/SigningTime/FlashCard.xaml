@@ -10,6 +10,12 @@
         VerticalOptions="Center"
         BackgroundColor="#FEF7DD">
         
+        <!-- Handles when the stack layout (card) is tapped -->
+        <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="FlipCard" />
+        </StackLayout.GestureRecognizers>
+        
+        
         <Label Text="EAT"
                x:Name="signName"
                FontSize="Large"
@@ -23,8 +29,6 @@
         <Button Text="Watch Video of Sign"
                Clicked="SignDemonstration" />
         
-        <Button Text="Flip"
-               Clicked="FlipCard" />
     </StackLayout>
     
     <!--

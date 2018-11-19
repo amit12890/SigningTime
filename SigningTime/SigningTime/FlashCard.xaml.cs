@@ -57,7 +57,7 @@ namespace SigningTime
         /// <param name="e">E.</param>
         async void FlipCard(object sender, System.EventArgs e)
         {
-            uint speed = 550;
+            uint speed = 500;
 
             await wholePage.RotateYTo(-90, speed, Easing.SpringIn);
             wholePage.RotationY = -270;
