@@ -190,6 +190,8 @@
     <ImageAsset Include="Assets.xcassets\new_.imageset\new.png" />
     <ImageAsset Include="Assets.xcassets\again.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\again.imageset\again.png" />
+    <ImageAsset Include="Assets.xcassets\card_bottom.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\card_bottom.imageset\Untitled-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -258,5 +260,6 @@
     <Folder Include="Assets.xcassets\where.imageset\" />
     <Folder Include="Assets.xcassets\new_.imageset\" />
     <Folder Include="Assets.xcassets\again.imageset\" />
+    <Folder Include="Assets.xcassets\card_bottom.imageset\" />
   </ItemGroup>
 </Project>

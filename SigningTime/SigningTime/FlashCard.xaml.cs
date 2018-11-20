@@ -15,6 +15,11 @@ namespace SigningTime
 
         private Sign sign;
 
+        // Parameterless constructor for building the layout
+        public FlashCard(){
+            InitializeComponent();
+        }
+
         public FlashCard(Sign sign, int cardNumber)
         {
             this.sign = sign;
@@ -57,7 +62,7 @@ namespace SigningTime
         /// <param name="e">E.</param>
         async void FlipCard(object sender, System.EventArgs e)
         {
-            uint speed = 500;
+            uint speed = 400;
 
             await wholePage.RotateYTo(-90, speed, Easing.SpringIn);
             wholePage.RotationY = -270;

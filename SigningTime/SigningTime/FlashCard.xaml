@@ -2,47 +2,62 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="SigningTime.FlashCard"
-             BackgroundColor="#FFFFFF"
+             BackgroundColor="#333333"
              Padding="20">
-    
-    <StackLayout x:Name="wholePage"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        BackgroundColor="#FEF7DD">
+
+    <Grid x:Name="wholePage" BackgroundColor="#FEF7DD">
         
-        <!-- Handles when the stack layout (card) is tapped -->
-        <StackLayout.GestureRecognizers>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="65*" />
+        </Grid.RowDefinitions>
+
+        
+        <!-- Handles when "card" is tapped -->
+        <Grid.GestureRecognizers>
             <TapGestureRecognizer Tapped="FlipCard" />
-        </StackLayout.GestureRecognizers>
+        </Grid.GestureRecognizers>
         
         
+        <!-- TOP PORTION -->
+        <BoxView BackgroundColor="Green" Grid.Row="0"/>
         <Label Text="EAT"
                x:Name="signName"
                FontSize="Large"
                TextColor="#F07983"
-               HorizontalOptions="Center" />
+               Margin="20"
+               HorizontalOptions="Center" 
+               Grid.Row="0"/>
+        
+        <!-- MIDDLE PORTION -->
+        <BoxView BackgroundColor="Blue" Grid.Row="1" />
         <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua."
                x:Name="signDescription"
-               Margin="50"/>
-        <Image Source="Eat" 
-               x:Name="signImage"/>
-        <Button Text="Watch Video of Sign"
-               Clicked="SignDemonstration" />
+               Margin="50,30,50,30"
+               Grid.Row="1"/>
         
-    </StackLayout>
-    
-    <!--
-    <RelativeLayout>
-        <BoxView Color="#F38C91"
-                 RelativeLayout.WidthConstraint="{ConstraintExpression
-                    Type=RelativeToParent,
-                    Property=Width,
-                    Factor=1}" 
-                 RelativeLayout.HeightConstraint="{ConstraintExpression
-                    Type=RelativeToParent,
-                    Property=Height,
-                    Factor=0.5}" />
-    </RelativeLayout>
-    -->
+        
+        <Button Text="Watch Video of Sign"
+               Clicked="SignDemonstration" 
+                Grid.Row="1"/>
+        
+        <!-- BOTTOM PORTION -->
+        <BoxView BackgroundColor="Purple" Grid.Row="2" />
+        
+        <StackLayout Grid.Row="2" VerticalOptions="FillAndExpand">
+            <Image Source="eat" 
+                   VerticalOptions="FillAndExpand" 
+                   x:Name="signImage" 
+                   TranslationY="12"/>
+            <Image Source="card_bottom" 
+                   VerticalOptions="End"/>
+        </StackLayout>
+        
+
+        
+
+        
+    </Grid>
     
 </ContentPage>
