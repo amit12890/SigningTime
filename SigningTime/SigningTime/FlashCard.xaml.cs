@@ -14,6 +14,9 @@ namespace SigningTime
     {
 
         private Sign sign;
+        private int cardSequenceNum;
+        private int numOfCards;
+        private bool front; // Represents if card front is facing out
 
         // Parameterless constructor for building the layout
         public FlashCard(){
@@ -22,17 +25,23 @@ namespace SigningTime
 
         public FlashCard(Sign sign, int cardNumber, int numOfCards)
         {
+            // Initialize member variables
             this.sign = sign;
+            this.cardSequenceNum = cardNumber;
+            this.numOfCards = numOfCards;
+            front = true;
 
             InitializeComponent();
 
-            // Sets up the current Page with correct values
-            signName.Text = sign.Name;
-            currentCardNumber.Text = "(" + cardNumber + "/" + numOfCards + ")";
+            // Sets up the current Page with correct (cleared out) values
+            currentCardNumber.Text = "(" + cardSequenceNum + "/" + numOfCards + ")";
+            signName.Text = "";
+            signDescription.Text = "";
+            videoButton.IsVisible = false;
 
-            if (sign.Description != null){
-                signDescription.Text = sign.Description;
-            }
+            //if (sign.Description != null){
+            //    signDescription.Text = sign.Description;
+            //}
             // signDescription.Text = sign.Description;
 
 
@@ -67,6 +76,20 @@ namespace SigningTime
 
             await wholePage.RotateYTo(-90, speed, Easing.SpringIn);
             wholePage.RotationY = -270;
+
+            if(front){ // Currently on front, so flip to back
+                front = false;
+                signName.Text = sign.Name;
+                signDescription.Text = sign.Description;
+                videoButton.IsVisible = true;
+            }
+            else{
+                front = true; // Currently on back, so flip to front
+                signName.Text = "";
+                signDescription.Text = "";
+                videoButton.IsVisible = false;
+            }
+
             await wholePage.RotateYTo(-360, speed, Easing.SpringOut);
             wholePage.RotationY = 0;
         }

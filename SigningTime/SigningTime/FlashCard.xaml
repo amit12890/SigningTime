@@ -11,7 +11,8 @@
         
         <Grid.RowDefinitions>
             <RowDefinition Height="10*" />
-            <RowDefinition Height="25*" />
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="5*" />
             <RowDefinition Height="65*" />
         </Grid.RowDefinitions>
 
@@ -26,13 +27,11 @@
         <RelativeLayout Grid.Row="0"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand">
-            <StackLayout 
-                         VerticalOptions="FillAndExpand">
-            
+           
+            <StackLayout VerticalOptions="FillAndExpand">      
                 <Image Source="card_bottom" 
                        RotationX="180"
                        VerticalOptions="Start"/>
-            
                 <Label Text="eat"
                        Font="FredokaOne-Regular"
                        x:Name="signName"
@@ -41,7 +40,6 @@
                        HorizontalOptions="Center" 
                        VerticalOptions="Center"
                        TranslationY="-62" />
-                
             </StackLayout>
             
             <Label Text="xx/xx"
@@ -67,11 +65,12 @@
                Grid.Row="1"/>
         
         <Button Text="Watch Video of Sign"
-                Clicked="SignDemonstration" 
-                Grid.Row="1"/>
+                Clicked="SignDemonstration"
+                x:Name="videoButton"
+                Grid.Row="2"/>
         
         <!-- BOTTOM PORTION -->
-        <StackLayout Grid.Row="2" VerticalOptions="FillAndExpand">
+        <StackLayout Grid.Row="3" VerticalOptions="FillAndExpand">
             <Image Source="eat" 
                    VerticalOptions="FillAndExpand" 
                    x:Name="signImage" 
