@@ -20,16 +20,17 @@ namespace SigningTime
             InitializeComponent();
         }
 
-        public FlashCard(Sign sign, int cardNumber)
+        public FlashCard(Sign sign, int cardNumber, int numOfCards)
         {
             this.sign = sign;
 
             InitializeComponent();
 
             // Sets up the current Page with correct values
-            signName.Text = sign.Name.ToUpper() + " (card: " + cardNumber + ")";
+            signName.Text = sign.Name;
+            currentCardNumber.Text = "(" + cardNumber + "/" + numOfCards + ")";
 
-            if(sign.Description != null){
+            if (sign.Description != null){
                 signDescription.Text = sign.Description;
             }
             // signDescription.Text = sign.Description;
