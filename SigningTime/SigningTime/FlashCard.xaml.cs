@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 
-
+using Octane.Xamarin.Forms.VideoPlayer; // For the video player
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,7 @@ namespace SigningTime
 
         private Sign sign;
         private bool front; // Represents if card front is facing out
+        private VideoPlayer videoPlayer;
 
         // Parameterless constructor for building the layout
         public FlashCard(){
@@ -47,9 +48,12 @@ namespace SigningTime
         /// <summary>
         /// Launches the SignDemonstration page for this sign
         /// </summary>
-        private async void SignDemonstration(object sender, System.EventArgs e)
+        private void SignDemonstration(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new SignDemonstration(sign));
+            addVideoToCard();
+
+            // Creates a video demonstration page
+            // await Navigation.PushAsync(new SignDemonstration(sign));
         }
 
         /// <summary>
@@ -63,8 +67,8 @@ namespace SigningTime
         {
             uint speed = 400;
 
-            await wholePage.RotateYTo(-90, speed, Easing.SpringIn);
-            wholePage.RotationY = -270;
+            await card.RotateYTo(-90, speed, Easing.SpringIn);
+            card.RotationY = -270;
 
             if(front){ // Currently on front, so flip to back
                 front = false;
@@ -79,8 +83,50 @@ namespace SigningTime
                 videoButton.IsVisible = false;
             }
 
-            await wholePage.RotateYTo(-360, speed, Easing.SpringOut);
-            wholePage.RotationY = 0;
+            await card.RotateYTo(-360, speed, Easing.SpringOut);
+            card.RotationY = 0;
+        }
+
+        /// <summary>
+        /// Adds a video player to this flash card page. For visual clarity,
+        /// the underlying static image of the sign as well as its descriptive
+        /// text is hidden from view, so as to not clutter the card. The video
+        /// will begin playing immediately.
+        /// 
+        /// The FlashCards are set up with two Grids, one on top of the other. 
+        /// This allows for the easy positioning of the video player right on 
+        /// top of the underlying "card." 
+        /// </summary>
+        private void addVideoToCard(){
+            // Set up the VideoPlayer object
+            videoPlayer = new VideoPlayer();
+            videoPlayer.AutoPlay = true;
+            videoPlayer.DisplayControls = true;
+            videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
+            videoPlayer.VerticalOptions = LayoutOptions.CenterAndExpand;
+
+            // Hide underlying views (static image of sign and descriptive text)
+            signDescription.IsVisible = false;
+            signImage.IsVisible = false;
+
+
+            // Add the video to the layout
+            outerLayout.Children.Add(videoPlayer);
+            outerLayout.RaiseChild(videoPlayer);
+        }
+
+        internal void removeVideoFromCard()
+        {
+
+            if(videoPlayer == null){
+                return;
+            }
+
+            outerLayout.Children.Remove(videoPlayer);
+
+            // Hide underlying views (static image of sign and descriptive text)
+            signDescription.IsVisible = true;
+            signImage.IsVisible = true;
         }
     }
 }

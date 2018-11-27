@@ -6,18 +6,15 @@
               Title="{Binding Name}" 
               NavigationPage.HasBackButton="True">
     <ContentPage.Content>
+        
         <StackLayout>
             <Label Text="{Binding Name}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <o:VideoPlayer Source="https://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4"
-                           AutoPlay="True"
+            <o:VideoPlayer AutoPlay="True"
                            HeightRequest="180"
                            x:Name="video_player"/>
-            <Button Text="Play"
-                    x:Name="play_button"
-                    Clicked="Button_ClickedAsync"
-               />
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

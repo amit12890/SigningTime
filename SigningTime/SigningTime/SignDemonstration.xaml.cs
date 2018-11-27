@@ -42,13 +42,5 @@ namespace SigningTime
             // TODO: Specify player dimensions? (use HeightRequest attribute?)
         }
 
-
-        /*
-         * Handles when the Play button is clicked
-         */
-        private void Button_ClickedAsync(object sender, EventArgs e)
-        {
-            // TODO: Implement custom controls
-        }
     }
 }

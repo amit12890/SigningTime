@@ -3,92 +3,103 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="SigningTime.FlashCard"
              BackgroundColor="#333333"
-             Padding="20">
+             Padding="20" >
     
-    <Grid x:Name="wholePage" BackgroundColor="#FEF7DD"
-          RowSpacing="0">
+    <!-- Outer grid intended for layering (specifically the video overlay) -->
+    <Grid x:Name="outerLayout"
+          RowSpacing="0" >
         
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*" />
-            <RowDefinition Height="25*" />
-            <RowDefinition Height="65*" />
+            <RowDefinition Height="AUTO"/>
         </Grid.RowDefinitions>
         
-        <!-- Handles when "card" is tapped -->
-        <Grid.GestureRecognizers>
-            <TapGestureRecognizer Tapped="FlipCard" />
-        </Grid.GestureRecognizers>
-        
-        <!-- TOP PORTION -->
-        <StackLayout VerticalOptions="FillAndExpand"
-                     Grid.Row="0">      
-            <Image Source="card_bottom" 
-                   RotationX="180"
-                   VerticalOptions="Start"/> 
-        </StackLayout>
-        
-        <Label Text="eat"
-               Grid.Row="0"
-               x:Name="signName"
-               FontSize="35"
-               TextColor="#EEEEEE"
-               HorizontalOptions="Center" 
-               VerticalOptions="Center" >
-               <Label.FontFamily> 
-                   <OnPlatform x:TypeArguments="x:String"
-                               iOS="FredokaOne-Regular"
-                               Android="FredokaOne-Regular.ttf#Fredoka One" />
-               </Label.FontFamily>
-           </Label>
-        
-        <RelativeLayout Grid.Row="0"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="FillAndExpand">
-            <Label Text="xx/xx"
-                    x:Name="currentCardNumber"
-                    FontSize="Small"
-                    FontAttributes="Bold"
-                    TextColor="#EEEEEE"
-                    RelativeLayout.XConstraint="{ConstraintExpression
-                        Type=RelativeToParent,
-                        Property=Width,
-                        Factor= 0.84 }"
-                   RelativeLayout.YConstraint="{ConstraintExpression
-                        Type=RelativeToParent,
-                        Property=Height,
-                        Factor=0.1}"/>
-        </RelativeLayout>
+        <!-- Inner grid is what makes up the actual card itself -->
+        <Grid x:Name="card" BackgroundColor="#FEF7DD"
+              RowSpacing="0">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="65*" />
+            </Grid.RowDefinitions>
+            
+            <!-- Handles when "card" is tapped -->
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="FlipCard" />
+            </Grid.GestureRecognizers>
+            
+            <!-- TOP PORTION -->
+            <StackLayout VerticalOptions="FillAndExpand"
+                         HorizontalOptions="Fill"
+                         Grid.Row="0">      
+                <Image Source="card_bottom" 
+                       RotationX="180"
+                       VerticalOptions="Start"/> 
+            </StackLayout>
+            
+            <Label Text="eat"
+                   Grid.Row="0"
+                   x:Name="signName"
+                   FontSize="35"
+                   TextColor="#EEEEEE"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" >
+                   <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                                   iOS="FredokaOne-Regular"
+                                   Android="FredokaOne-Regular.ttf#Fredoka One" />
+                   </Label.FontFamily>
+               </Label>
+            
+            <RelativeLayout Grid.Row="0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                <Label Text="xx/xx"
+                        x:Name="currentCardNumber"
+                        FontSize="Small"
+                        FontAttributes="Bold"
+                        TextColor="#EEEEEE"
+                        RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Width,
+                            Factor= 0.84 }"
+                       RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.1}"/>
+            </RelativeLayout>
 
-        
-        <!-- MIDDLE PORTION -->
-        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua."
-               x:Name="signDescription"
-               Margin="50,30,50,20"
-               Grid.Row="1"/>
-        
-        <!-- BOTTOM PORTION -->
-       <Image Source="eat" 
-              Margin="20"
-              VerticalOptions="FillAndExpand"
-              TranslationY="-25"
-              Grid.Row="2"
-              x:Name="signImage" />
-        
-       <Image Source="card_bottom" 
-              VerticalOptions="End"
-              Grid.Row="2"/>
-                
-        <Image Source="video_icon"
-               Grid.Row="2" 
-               VerticalOptions="End"
-               Scale=".5"
-               x:Name="videoButton"
-               TranslationY="8" >
-            <Image.GestureRecognizers>
-                <TapGestureRecognizer
-                    Tapped="SignDemonstration"
-                    NumberOfTapsRequired="1" />
-            </Image.GestureRecognizers>
-       </Image>
-    </Grid>       
+            
+            <!-- MIDDLE PORTION -->
+            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua."
+                   x:Name="signDescription"
+                   Margin="50,30,50,20"
+                   Grid.Row="1"/>
+            
+            <!-- BOTTOM PORTION -->
+           <Image Source="eat" 
+                  Grid.Row="2"
+                  Margin="20"
+                  VerticalOptions="FillAndExpand"
+                  TranslationY="-25"
+                  x:Name="signImage" />
+            
+           <Image Source="card_bottom" 
+                  Grid.Row="2"
+                  VerticalOptions="End" />
+                    
+            <Image Source="video_icon"
+                   Grid.Row="2" 
+                   VerticalOptions="End"
+                   Scale=".5"
+                   x:Name="videoButton"
+                   TranslationY="8" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="SignDemonstration"
+                        NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+           </Image>
+        </Grid>   
+    </Grid>    
 </ContentPage>

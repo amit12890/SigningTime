@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Collections.Specialized;
 using Xamarin.Forms;
 
 namespace SigningTime
@@ -68,5 +68,42 @@ namespace SigningTime
             }
 
         }
+
+        /// <summary>
+        /// Handles what happens when the carousel rotates to another page. 
+        /// Override helps to remove any left over VideoPlayer objects from a 
+        /// card if a user navigates away from it. If the user chooses to
+        /// navigate back to a card on which they'd watched a video, they'll
+        /// be presented with the card in its original, static-image state.
+        /// </summary>
+        protected override void OnCurrentPageChanged()
+        {
+            base.OnCurrentPageChanged();
+
+            // The first time the first card is encountered in the card deck,
+            // the number of children is limited to 0 for some reason. This
+            // check helps prevent the resulting crash.
+            if(Children.Count <= 1){
+                return;
+            }
+
+            // Remove any VideoPlayers from previously viewed card. Don't know 
+            // which way the cards were swiped, so we have to check both the 
+            // left and right cards.
+            int indexOfCurrentPage = this.Children.IndexOf(CurrentPage);
+
+            if (indexOfCurrentPage == 0){
+                ((FlashCard)Children[1]).removeVideoFromCard();
+            }
+            else if(indexOfCurrentPage == Children.Count-1){
+                ((FlashCard)Children[Children.Count - 2]).removeVideoFromCard();
+            }
+            else{
+                ((FlashCard)Children[indexOfCurrentPage - 1]).removeVideoFromCard();
+                ((FlashCard)Children[indexOfCurrentPage + 1]).removeVideoFromCard();
+            }
+        }
+
+
     }
 }
