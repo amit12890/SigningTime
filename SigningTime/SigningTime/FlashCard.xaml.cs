@@ -14,8 +14,6 @@ namespace SigningTime
     {
 
         private Sign sign;
-        private int cardSequenceNum;
-        private int numOfCards;
         private bool front; // Represents if card front is facing out
 
         // Parameterless constructor for building the layout
@@ -25,52 +23,43 @@ namespace SigningTime
 
         public FlashCard(Sign sign, int cardNumber, int numOfCards)
         {
-            // Initialize member variables
+            // Initialize member variables and layout
             this.sign = sign;
-            this.cardSequenceNum = cardNumber;
-            this.numOfCards = numOfCards;
             front = true;
-
             InitializeComponent();
 
             // Sets up the current Page with correct (cleared out) values
-            currentCardNumber.Text = "(" + cardSequenceNum + "/" + numOfCards + ")";
+            currentCardNumber.Text = "(" + cardNumber + "/" + numOfCards + ")";
             signName.Text = "";
             signDescription.Text = "";
             videoButton.IsVisible = false;
 
-            //if (sign.Description != null){
-            //    signDescription.Text = sign.Description;
-            //}
-            // signDescription.Text = sign.Description;
-
-
-            // Can't have a resoruce image file with name "new", so need to
-            // handle when the new sign and add '_' to the name for the img file
-            if(sign.Name.Equals("New")){
-                signImage.Source = sign.Name.ToLower() + "_";
+            // Can't have a resoruce image file with name "new", so 
+            // add '_' to the name for the img file
+            if(sign.Name.Equals("new")){
+                signImage.Source = sign.Name + "_";
             }
             else{
-                signImage.Source = sign.Name.ToLower();
+                signImage.Source = sign.Name;
             }
-
-            // signImage.Source = "eat";
         }
 
         /// <summary>
         /// Launches the SignDemonstration page for this sign
         /// </summary>
-        async void SignDemonstration(object sender, System.EventArgs e)
+        private async void SignDemonstration(object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new SignDemonstration(sign));
         }
 
         /// <summary>
-        /// Flips a card to the other side.
+        /// Flips a card to the other side. Applies some animations to rotate
+        /// the card half way, then populates the card with the correct data, 
+        /// then finishes rotating card to create illusion of flipping.
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">E.</param>
-        async void FlipCard(object sender, System.EventArgs e)
+        private async void FlipCard(object sender, System.EventArgs e)
         {
             uint speed = 400;
 

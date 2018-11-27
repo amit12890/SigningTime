@@ -198,10 +198,10 @@
     <ImageAsset Include="Media.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
     <ImageAsset Include="Media.xcassets\LaunchImage.launchimage\Default-Portrait.png" />
     <ImageAsset Include="Media.xcassets\LaunchImage.launchimage\Default-Portrait%402x.png" />
-    <ImageAsset Include="Assets.xcassets\go_to_video.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\flip_card.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\flip_card.imageset\playvideoArtboard 1.png" />
-    <ImageAsset Include="Assets.xcassets\go_to_video.imageset\playArtboard 1.png" />
+    <ImageAsset Include="Assets.xcassets\video_icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\flip_icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\flip_icon.imageset\playvideoArtboard 1.png" />
+    <ImageAsset Include="Assets.xcassets\video_icon.imageset\video.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -269,7 +269,7 @@
     <Folder Include="Assets.xcassets\new_.imageset\" />
     <Folder Include="Assets.xcassets\again.imageset\" />
     <Folder Include="Assets.xcassets\card_bottom.imageset\" />
-    <Folder Include="Assets.xcassets\go_to_video.imageset\" />
-    <Folder Include="Assets.xcassets\flip_card.imageset\" />
+    <Folder Include="Assets.xcassets\video_icon.imageset\" />
+    <Folder Include="Assets.xcassets\flip_icon.imageset\" />
   </ItemGroup>
 </Project>
