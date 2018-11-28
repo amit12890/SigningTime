@@ -202,6 +202,8 @@
     <ImageAsset Include="Assets.xcassets\flip_icon.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\flip_icon.imageset\playvideoArtboard 1.png" />
     <ImageAsset Include="Assets.xcassets\video_icon.imageset\video.png" />
+    <ImageAsset Include="Assets.xcassets\frog.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\frog.imageset\MISSING.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -271,5 +273,6 @@
     <Folder Include="Assets.xcassets\card_bottom.imageset\" />
     <Folder Include="Assets.xcassets\video_icon.imageset\" />
     <Folder Include="Assets.xcassets\flip_icon.imageset\" />
+    <Folder Include="Assets.xcassets\frog.imageset\" />
   </ItemGroup>
 </Project>

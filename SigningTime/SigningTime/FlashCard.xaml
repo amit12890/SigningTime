@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:o="clr-namespace:Octane.Xamarin.Forms.VideoPlayer;assembly=Octane.Xamarin.Forms.VideoPlayer"
              x:Class="SigningTime.FlashCard"
              BackgroundColor="#333333"
              Padding="20" >
@@ -96,10 +97,21 @@
                    TranslationY="8" >
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer
-                        Tapped="SignDemonstration"
+                        Tapped="DemonstrateSign"
                         NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
            </Image>
-        </Grid>   
+        </Grid>  
+        
+        <!-- Video Player -->
+        <o:VideoPlayer
+            Grid.Row="0"
+            x:Name="videoPlayer"
+            AutoPlay="false"
+            IsVisible="false"
+            DisplayControls="true"
+            VerticalOptions="Center"
+            BackgroundColor="#Color.Transparent"/>
+        
     </Grid>    
 </ContentPage>
