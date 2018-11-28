@@ -76,12 +76,14 @@ namespace SigningTime
         private void DemonstrateSign(object sender, System.EventArgs e)
         {
             // Hide underlying text and static image
-            signDescription.Opacity = 0.1;
-            signImage.Opacity = 0.1;
+            signDescription.FadeTo(0.1, 300);
+            signImage.FadeTo(0.1, 300);
 
             // Set up and start the video
             cardInVideoMode = true;
+            videoPlayer.Opacity = 0;
             videoPlayer.IsVisible = true;
+            videoPlayer.FadeTo(1, 200);
             videoPlayer.Play();
         }
 
@@ -153,20 +155,23 @@ namespace SigningTime
         /// the source of the video seems to reset whatever was causing
         /// the issue to occur.
         /// </summary>
-        internal void ResetAndHideVideo()
+        internal async void ResetAndHideVideo()
         {
-            // Set video parameters
-            cardInVideoMode = false;
-            videoPlayer.Pause();
-            videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
-            videoPlayer.IsVisible = false;
-
+            #pragma warning disable CS4014
             // Set image/text parameters
-            signImage.Opacity = 1;
+            signImage.FadeTo(1, 300);
             if (!front)
             {
-                signDescription.Opacity = 1;
+                signDescription.FadeTo(1, 300);
             }
+
+            // Set video parameters
+            cardInVideoMode = false;
+            await videoPlayer.FadeTo(0, 200);
+            videoPlayer.IsVisible = false;
+            videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
+
+
         }
     }
 }
