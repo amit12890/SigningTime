@@ -109,9 +109,9 @@
             x:Name="videoPlayer"
             AutoPlay="false"
             IsVisible="false"
-            DisplayControls="true"
+            DisplayControls="false"
             VerticalOptions="Center"
-            BackgroundColor="#Color.Transparent"/>
+            BackgroundColor="#Color.Transparent" />
         
     </Grid>    
 </ContentPage>

@@ -1,6 +1,7 @@
 ﻿using System;
 using Octane.Xamarin.Forms.VideoPlayer; // For the video player
 using Octane.Xamarin.Forms.VideoPlayer.Events;
+using Octane.Xamarin.Forms.VideoPlayer.Constants;
 using Xamarin.Forms;
 
 namespace SigningTime
@@ -75,16 +76,27 @@ namespace SigningTime
         /// </summary>
         private void DemonstrateSign(object sender, System.EventArgs e)
         {
-            // Hide underlying text and static image
-            signDescription.FadeTo(0.1, 300);
-            signImage.FadeTo(0.1, 300);
 
-            // Set up and start the video
-            cardInVideoMode = true;
-            videoPlayer.Opacity = 0;
-            videoPlayer.IsVisible = true;
-            videoPlayer.FadeTo(1, 200);
-            videoPlayer.Play();
+            if(videoPlayer.State.Equals(PlayerState.Playing)){
+                videoPlayer.Pause();
+            }
+            else if(videoPlayer.State.Equals(PlayerState.Paused)){
+                videoPlayer.Play();
+            }
+            else if(videoPlayer.State.Equals(PlayerState.Prepared)){
+                // Hide underlying text and static image
+                signDescription.FadeTo(0.1, 300);
+                signImage.FadeTo(0.1, 300);
+
+                // Set up and start the video
+                cardInVideoMode = true;
+                videoPlayer.Opacity = 0;
+                videoPlayer.IsVisible = true;
+                videoPlayer.FadeTo(1, 200);
+                videoPlayer.Play();
+            }
+
+
         }
 
         /// <summary>
@@ -111,6 +123,8 @@ namespace SigningTime
             {
                 front = false;
                 signName.IsVisible = true;
+                signDescription.IsVisible = true;
+                signImage.IsVisible = true;
                 videoButton.IsVisible = true;
 
                 if (cardInVideoMode)
@@ -121,9 +135,7 @@ namespace SigningTime
                 }
                 else
                 {
-                    signDescription.IsVisible = true;
                     signDescription.Opacity = 1;
-                    signImage.IsVisible = true;
                     signImage.Opacity = 1 ;
                 }
             }
