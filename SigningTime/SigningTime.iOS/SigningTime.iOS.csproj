@@ -155,7 +155,6 @@
     <ImageAsset Include="Assets.xcassets\drink.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\drink.imageset\MISSING.png" />
     <ImageAsset Include="Assets.xcassets\eat.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\eat.imageset\eat.png" />
     <ImageAsset Include="Assets.xcassets\finished.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\finished.imageset\MISSING.png" />
     <ImageAsset Include="Assets.xcassets\fish.imageset\Contents.json" />
@@ -204,6 +203,7 @@
     <ImageAsset Include="Assets.xcassets\video_icon.imageset\video.png" />
     <ImageAsset Include="Assets.xcassets\frog.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\frog.imageset\MISSING.png" />
+    <ImageAsset Include="Assets.xcassets\eat.imageset\eat copy.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

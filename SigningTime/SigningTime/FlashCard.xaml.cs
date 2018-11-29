@@ -42,7 +42,7 @@ namespace SigningTime
             videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
             // Registers what to do with the video player based on video state
             videoPlayer.Completed += (object sender, VideoPlayerEventArgs e) => {
-                ResetAndHideVideo();
+                HideVideo();
             };
 
             // Add the video to the layout
@@ -76,7 +76,6 @@ namespace SigningTime
         /// </summary>
         private void DemonstrateSign(object sender, System.EventArgs e)
         {
-
             if(videoPlayer.State.Equals(PlayerState.Playing)){
                 videoPlayer.Pause();
             }
@@ -95,8 +94,6 @@ namespace SigningTime
                 videoPlayer.FadeTo(1, 200);
                 videoPlayer.Play();
             }
-
-
         }
 
         /// <summary>
@@ -167,8 +164,9 @@ namespace SigningTime
         /// the source of the video seems to reset whatever was causing
         /// the issue to occur.
         /// </summary>
-        internal async void ResetAndHideVideo()
+        private async void HideVideo()
         {
+            videoPlayer.Seek(-20);
             #pragma warning disable CS4014
             // Set image/text parameters
             signImage.FadeTo(1, 300);
@@ -182,8 +180,20 @@ namespace SigningTime
             await videoPlayer.FadeTo(0, 200);
             videoPlayer.IsVisible = false;
             videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
+        }
 
-
+        /// <summary>
+        /// Used by the FlashCardCarousel to completely hide a video when the
+        /// user swipes away from a video to another card.
+        /// </summary>
+        internal void HideVideoAfterSwipe()
+        {
+            videoPlayer.Pause();
+            signImage.Opacity = 1;
+            signDescription.Opacity = 1;
+            cardInVideoMode = false;
+            videoPlayer.IsVisible = false;
+            videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
         }
     }
 }

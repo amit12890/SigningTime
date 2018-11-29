@@ -78,16 +78,17 @@
                    Grid.Row="1"/>
             
             <!-- BOTTOM PORTION -->
+            
            <Image Source="eat" 
                   Grid.Row="2"
-                  Margin="20"
-                  VerticalOptions="FillAndExpand"
-                  TranslationY="-25"
+                  Margin="10,20,10,55"
+                  VerticalOptions="End"
                   x:Name="signImage" />
             
            <Image Source="card_bottom" 
                   Grid.Row="2"
-                  VerticalOptions="End" />
+                  VerticalOptions="End"
+                  HorizontalOptions="Center"/>
                     
             <Image Source="video_icon"
                    Grid.Row="2" 

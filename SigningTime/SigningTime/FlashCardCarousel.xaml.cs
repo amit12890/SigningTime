@@ -93,14 +93,14 @@ namespace SigningTime
             int indexOfCurrentPage = this.Children.IndexOf(CurrentPage);
 
             if (indexOfCurrentPage == 0){
-                ((FlashCard)Children[1]).ResetAndHideVideo();
+                ((FlashCard)Children[1]).HideVideoAfterSwipe();
             }
             else if(indexOfCurrentPage == Children.Count-1){
-                ((FlashCard)Children[Children.Count - 2]).ResetAndHideVideo();
+                ((FlashCard)Children[Children.Count - 2]).HideVideoAfterSwipe();
             }
             else{
-                ((FlashCard)Children[indexOfCurrentPage - 1]).ResetAndHideVideo();
-                ((FlashCard)Children[indexOfCurrentPage + 1]).ResetAndHideVideo();
+                ((FlashCard)Children[indexOfCurrentPage - 1]).HideVideoAfterSwipe();
+                ((FlashCard)Children[indexOfCurrentPage + 1]).HideVideoAfterSwipe();
             }
         }
 
