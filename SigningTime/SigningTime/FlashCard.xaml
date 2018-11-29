@@ -90,7 +90,7 @@
                   VerticalOptions="End"
                   HorizontalOptions="Center"/>
                     
-            <Image Source="video_icon"
+            <Image Source="video_play_icon"
                    Grid.Row="2" 
                    VerticalOptions="End"
                    Scale=".5"

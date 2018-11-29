@@ -197,13 +197,15 @@
     <ImageAsset Include="Media.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
     <ImageAsset Include="Media.xcassets\LaunchImage.launchimage\Default-Portrait.png" />
     <ImageAsset Include="Media.xcassets\LaunchImage.launchimage\Default-Portrait%402x.png" />
-    <ImageAsset Include="Assets.xcassets\video_icon.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\flip_icon.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\flip_icon.imageset\playvideoArtboard 1.png" />
-    <ImageAsset Include="Assets.xcassets\video_icon.imageset\video.png" />
     <ImageAsset Include="Assets.xcassets\frog.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\frog.imageset\MISSING.png" />
     <ImageAsset Include="Assets.xcassets\eat.imageset\eat copy.png" />
+    <ImageAsset Include="Assets.xcassets\video_play_icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\video_play_icon.imageset\video.png" />
+    <ImageAsset Include="Assets.xcassets\video_pause_icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\video_pause_icon.imageset\pause.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -271,8 +273,9 @@
     <Folder Include="Assets.xcassets\new_.imageset\" />
     <Folder Include="Assets.xcassets\again.imageset\" />
     <Folder Include="Assets.xcassets\card_bottom.imageset\" />
-    <Folder Include="Assets.xcassets\video_icon.imageset\" />
     <Folder Include="Assets.xcassets\flip_icon.imageset\" />
     <Folder Include="Assets.xcassets\frog.imageset\" />
+    <Folder Include="Assets.xcassets\video_play_icon.imageset\" />
+    <Folder Include="Assets.xcassets\video_pause_icon.imageset\" />
   </ItemGroup>
 </Project>

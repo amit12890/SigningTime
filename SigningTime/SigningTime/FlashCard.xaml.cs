@@ -77,12 +77,16 @@ namespace SigningTime
         private void DemonstrateSign(object sender, System.EventArgs e)
         {
             if(videoPlayer.State.Equals(PlayerState.Playing)){
+                videoButton.Source = "video_play_icon";
                 videoPlayer.Pause();
             }
             else if(videoPlayer.State.Equals(PlayerState.Paused)){
+                videoButton.Source = "video_pause_icon";
                 videoPlayer.Play();
             }
             else if(videoPlayer.State.Equals(PlayerState.Prepared)){
+                videoButton.Source = "video_pause_icon";
+
                 // Hide underlying text and static image
                 signDescription.FadeTo(0.1, 300);
                 signImage.FadeTo(0.1, 300);
@@ -109,6 +113,7 @@ namespace SigningTime
 
             if(cardInVideoMode){
                 videoPlayer.Pause();
+                videoButton.Source = "video_play_icon";
             }
 
             // Rotates the card 90 degrees
@@ -179,6 +184,7 @@ namespace SigningTime
             cardInVideoMode = false;
             await videoPlayer.FadeTo(0, 200);
             videoPlayer.IsVisible = false;
+            videoButton.Source = "video_play_icon";
             videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
         }
 
@@ -193,6 +199,7 @@ namespace SigningTime
             signDescription.Opacity = 1;
             cardInVideoMode = false;
             videoPlayer.IsVisible = false;
+            videoButton.Source = "video_play_icon";
             videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
         }
     }
