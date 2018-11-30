@@ -7,14 +7,69 @@
               NavigationPage.HasBackButton="True">
     <ContentPage.Content>
         
-        <StackLayout>
-            <Label Text="{Binding Name}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <o:VideoPlayer AutoPlay="True"
-                           HeightRequest="180"
-                           x:Name="videoPlayer"/>
-        </StackLayout>
+        
+        <!-- Inner grid is what makes up the actual card itself -->
+        <Grid BackgroundColor="#FEF7DD" RowSpacing="0">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="80*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+            
+            <!-- TOP PORTION -->
+            <StackLayout VerticalOptions="FillAndExpand"
+                         HorizontalOptions="Fill"
+                         Grid.Row="0">      
+                <Image Source="card_bottom" 
+                       RotationX="180"
+                       VerticalOptions="Start"/> 
+            </StackLayout>
+            
+            <Label Text="sign name here"
+                   Grid.Row="0"
+                   x:Name="signName"
+                   FontSize="35"
+                   TextColor="#EEEEEE"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" >
+                   <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                                   iOS="FredokaOne-Regular"
+                                   Android="FredokaOne-Regular.ttf#Fredoka One" />
+                   </Label.FontFamily>
+               </Label>  
+            
+            <!-- VIDEO / MIDDLE PORTION -->
+            <o:VideoPlayer
+                Grid.Row="1"
+                x:Name="videoPlayer"
+                AutoPlay="true"
+                VerticalOptions="Center"
+                BackgroundColor="#Color.Transparent"/>
+            
+           
+           <StackLayout
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="Fill"
+                Grid.Row="2">
+                
+                <Image Source="card_bottom"
+                  VerticalOptions="End" />     
+           </StackLayout>
+           
+                    
+            <Image Source="video_play_icon"
+                   Grid.Row="2"
+                   VerticalOptions="End"
+                   Scale=".5"
+                   x:Name="videoButton"
+                   TranslationY="8" >
+             </Image>
+            
+        </Grid>
+        
+       
         
     </ContentPage.Content>
 </ContentPage>

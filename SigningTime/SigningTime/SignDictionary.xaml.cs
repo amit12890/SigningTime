@@ -63,7 +63,7 @@ namespace SigningTime
                 new Sign { Name = "where" }, // TODO: NEED THIS VIDEO DOWNLOADED
             };
 			
-			MyListView.ItemsSource = ListOfSigns;
+			signList.ItemsSource = ListOfSigns;
         }
 
         // async keyword enables the await keyword to work. Any function using 'await' must

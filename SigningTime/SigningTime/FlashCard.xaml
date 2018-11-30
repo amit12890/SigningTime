@@ -79,19 +79,19 @@
             
             <!-- BOTTOM PORTION -->
             
-           <Image Source="eat_sign" 
+           <Image Source="eat_sign"
                   Grid.Row="2"
                   Margin="10,20,10,55"
                   VerticalOptions="End"
                   x:Name="signImage" />
             
-           <Image Source="card_bottom" 
+           <Image Source="card_bottom"
                   Grid.Row="2"
                   VerticalOptions="End"
                   HorizontalOptions="Center"/>
                     
             <Image Source="video_play_icon"
-                   Grid.Row="2" 
+                   Grid.Row="2"
                    VerticalOptions="End"
                    Scale=".5"
                    x:Name="videoButton"
@@ -102,7 +102,7 @@
                         NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
            </Image>
-        </Grid>  
+        </Grid>
         
         <!-- Video Player -->
         <o:VideoPlayer
@@ -112,7 +112,7 @@
             IsVisible="false"
             DisplayControls="false"
             VerticalOptions="Center"
-            BackgroundColor="#Color.Transparent" 
+            BackgroundColor="#Color.Transparent"
             Margin="0,0,0,20"/>
         
     </Grid>    

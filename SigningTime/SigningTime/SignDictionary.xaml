@@ -2,28 +2,39 @@
 <ContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               x:Class="SigningTime.SignDictionary"
-              Title="Signs"
-             >
+              Title="Signs" 
+              BackgroundColor="#FEF7DD">
 
-    <!-- Contains the search bar and list-->
-    <StackLayout>
-
-        <SearchBar Placeholder="Search..." TextChanged="SearchBar_TextChanged"/>
-
-        <ListView x:Name="MyListView"
-            SeparatorVisibility="None"
-            ItemsSource="{Binding Items}"
-            ItemTapped="Handle_ItemTapped"
-            CachingStrategy="RecycleElement">
-            
-            <!--Built in Cells-->
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Name}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-         </ListView>
+    <ListView x:Name="signList"
+        SeparatorVisibility="Default"
+        ItemsSource="{Binding Items}"
+        ItemTapped="Handle_ItemTapped"
+        CachingStrategy="RecycleElement"
+        HasUnevenRows="true"
+        BackgroundColor="#FEF7DD">
         
-    </StackLayout>
-    
+        <!--Built in Cells-->
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                
+                <!-- INDIVIDUAL CELL LAYOUT -->
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="10">
+                        
+                        <Image Source="eat_illustration"
+                               HeightRequest="50"
+                               WidthRequest="50"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" />
+                        <Label Text="{Binding Name}"
+                               VerticalOptions="Center"/>
+                        
+                    </StackLayout>
+                </ViewCell>
+                
+            </DataTemplate>
+        </ListView.ItemTemplate>
+     </ListView>
+        
 </ContentPage>
