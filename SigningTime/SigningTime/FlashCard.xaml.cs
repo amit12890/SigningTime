@@ -30,7 +30,7 @@ namespace SigningTime
             currentCardNumber.Text = "(" + cardNumber + "/" + numOfCards + ")";
             signName.Text = sign.Name;
             signDescription.Text = sign.Description;
-            signImage.Source = sign.Name;
+            signImage.Source = sign.Name + "_sign";
 
             // Hide/Display the correct views for the card's front
             signName.IsVisible = false;
@@ -49,16 +49,11 @@ namespace SigningTime
             outerLayout.Children.Add(videoPlayer);
             outerLayout.RaiseChild(videoPlayer);
 
-            // Can't have a resoruce image file with name "new", so 
-            // add '_' to the name for the img file
-            if (sign.Name.Equals("new"))
+            if (sign.Name.Equals("eat"))
             {
-                signImage.Source = sign.Name + "_";
+                signImage.Source = "eat_illustration";
             }
-            else
-            {
-                signImage.Source = sign.Name;
-            }
+
         }
 
         /// <summary>
@@ -129,6 +124,10 @@ namespace SigningTime
                 signImage.IsVisible = true;
                 videoButton.IsVisible = true;
 
+                if (sign.Name.Equals("eat")){
+                    signImage.Source = "eat_sign";
+                }
+
                 if (cardInVideoMode)
                 {
                     videoPlayer.IsVisible = true;
@@ -144,6 +143,11 @@ namespace SigningTime
             // Switching card to the front
             else
             {
+                if (sign.Name.Equals("eat"))
+                {
+                    signImage.Source = "eat_illustration";
+                }
+
                 front = true;
                 signImage.IsVisible = true;
                 signImage.Opacity = 1;

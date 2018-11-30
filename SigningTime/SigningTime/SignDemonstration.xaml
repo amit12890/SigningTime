@@ -13,7 +13,7 @@
                 HorizontalOptions="CenterAndExpand" />
             <o:VideoPlayer AutoPlay="True"
                            HeightRequest="180"
-                           x:Name="video_player"/>
+                           x:Name="videoPlayer"/>
         </StackLayout>
         
     </ContentPage.Content>

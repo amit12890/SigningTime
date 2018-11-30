@@ -35,11 +35,14 @@ namespace SigningTime
             InitializeComponent();
 
             // Prep the VideoPlayer with the correct video file
-            VideoPlayer videoPlayer = this.FindByName<VideoPlayer>("video_player");
-            String videoName = tappedSign.Name + ".mp4";
-            videoPlayer.Source = VideoSource.FromResource(videoName);
+            videoPlayer.Source = VideoSource.FromResource(tappedSign.Name + ".mp4");
 
-            // TODO: Specify player dimensions? (use HeightRequest attribute?)
+        }
+
+
+        protected override void OnDisappearing()
+        {
+            videoPlayer.Pause();
         }
 
     }
