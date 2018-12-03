@@ -3,8 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:o="clr-namespace:Octane.Xamarin.Forms.VideoPlayer;assembly=Octane.Xamarin.Forms.VideoPlayer"
              x:Class="SigningTime.FlashCard"
+             NavigationPage.HasNavigationBar="false"
              BackgroundColor="#333333"
-             Padding="20" >
+             Padding="20, 50, 20, 20" >
     
     <!-- Outer grid intended for layering (specifically the video overlay) -->
     <Grid x:Name="outerLayout"

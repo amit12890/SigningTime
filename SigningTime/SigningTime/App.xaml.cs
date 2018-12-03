@@ -22,7 +22,18 @@ namespace SigningTime
             // Navigation Bar.
             //MainPage = new NavigationPage(new SignDictionary());
 
-            MainPage = new MainPage();
+            if (Device.RuntimePlatform == (Device.iOS))
+            {
+                // Need custom renderer to prevent video crashes
+                MainPage = new CustomTabs();
+            }
+            else
+            {
+                // No custom renderer needed for Android
+                MainPage = new Tabs();
+            }
+
+
         }
 
         protected override void OnStart()

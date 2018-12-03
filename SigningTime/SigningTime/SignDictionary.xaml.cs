@@ -91,9 +91,6 @@ namespace SigningTime
             ((ListView)sender).SelectedItem = null;
         }
 
-        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            // TODO: Implement Search Bar
-        }
+
     }
 }

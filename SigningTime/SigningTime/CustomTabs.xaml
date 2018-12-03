@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SigningTime"
+    NavigationPage.HasNavigationBar="false"
+    x:Class="SigningTime.CustomTabs">
+    
+    <!-- NavigationPage needs a root page, so it takes the argument -->
+    <!-- The Dictionary list of signs -->
+    <NavigationPage Title="Dictionary" Icon="DictionaryIcon">
+        <x:Arguments>
+            <local:SignDictionary/>
+        </x:Arguments>
+    </NavigationPage>
+    
+    <!-- Flashcards -->
+    <NavigationPage Title="Flash Cards" Icon="FlashIcon">
+        <x:Arguments>
+            <local:FlashCardCarousel />
+        </x:Arguments>
+    </NavigationPage>
+    
+    
+    <!--Quiz -->
+    <ContentPage Title="Quiz" Icon="QuizIcon">
+         <Label Text="Here's where the quiz will go" HorizontalOptions="Center" VerticalOptions="Center" />
+    </ContentPage>
+    
+    <!-- Information -->
+    <ContentPage Title="About" Icon="InfoIcon">
+         <Label Text="Here's where other information will go" HorizontalOptions="Center" VerticalOptions="Center" />
+    </ContentPage>
+                 
+
+</TabbedPage>

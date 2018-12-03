@@ -103,5 +103,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="FlashCards.xaml.cs" />
+    <Compile Remove="TabRenderer.cs" />
   </ItemGroup>
 </Project>

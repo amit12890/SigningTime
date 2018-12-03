@@ -3,7 +3,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:SigningTime"
-    x:Class="SigningTime.MainPage">
+    NavigationPage.HasNavigationBar="false"
+    x:Class="SigningTime.Tabs">
     
     <!-- NavigationPage needs a root page, so it takes the argument -->
     <!-- The Dictionary list of signs -->
@@ -12,6 +13,8 @@
             <local:SignDictionary/>
         </x:Arguments>
     </NavigationPage>
+    
+    <local:SignDictionary Title="Dictionary" Icon=""/>
     
     <!-- Flashcards -->
     <NavigationPage Title="Flash Cards" Icon="FlashIcon">
@@ -30,7 +33,6 @@
     <ContentPage Title="About" Icon="InfoIcon">
          <Label Text="Here's where other information will go" HorizontalOptions="Center" VerticalOptions="Center" />
     </ContentPage>
-    
-             
+                 
 
 </TabbedPage>

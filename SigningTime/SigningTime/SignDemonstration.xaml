@@ -3,8 +3,8 @@
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:o="clr-namespace:Octane.Xamarin.Forms.VideoPlayer;assembly=Octane.Xamarin.Forms.VideoPlayer"
               x:Class="SigningTime.SignDemonstration"
-              Title="{Binding Name}" 
-              NavigationPage.HasBackButton="True">
+              NavigationPage.HasNavigationBar="false"
+              BackgroundColor="#F17982">
     <ContentPage.Content>
         
         
@@ -20,25 +20,54 @@
             <!-- TOP PORTION -->
             <StackLayout VerticalOptions="FillAndExpand"
                          HorizontalOptions="Fill"
-                         Grid.Row="0">      
+                         Grid.Row="0"
+                         Spacing="0"> 
+                <Image Source="filler_bar_bottom"
+                       VerticalOptions="Start"
+                       Aspect="Fill"
+                       HeightRequest="20"/> 
+                
                 <Image Source="card_bottom" 
                        RotationX="180"
                        VerticalOptions="Start"/> 
             </StackLayout>
             
-            <Label Text="sign name here"
+            <Label Text="{Binding Name}"
                    Grid.Row="0"
                    x:Name="signName"
                    FontSize="35"
                    TextColor="#EEEEEE"
                    HorizontalOptions="Center" 
-                   VerticalOptions="Center" >
+                   VerticalOptions="Center"
+                   Margin="0,30,0,0">
                    <Label.FontFamily> 
                        <OnPlatform x:TypeArguments="x:String"
                                    iOS="FredokaOne-Regular"
                                    Android="FredokaOne-Regular.ttf#Fredoka One" />
                    </Label.FontFamily>
-               </Label>  
+               </Label>
+            
+            <RelativeLayout Grid.Row="0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                <Button Text="Back"
+                        Margin="0"
+                        Clicked="BackButton"
+                        x:Name="currentCardNumber"
+                        FontSize="Small"
+                        FontAttributes="Bold"
+                        TextColor="#EEEEEE"
+                        RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Width,
+                            Factor=0.0,
+                            Constant=20}"
+                       RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.0,
+                            Constant=25}"/>
+            </RelativeLayout>
             
             <!-- VIDEO / MIDDLE PORTION -->
             <o:VideoPlayer
@@ -55,21 +84,10 @@
                 Grid.Row="2">
                 
                 <Image Source="card_bottom"
-                  VerticalOptions="End" />     
+                  VerticalOptions="End" />
            </StackLayout>
-           
-                    
-            <Image Source="video_play_icon"
-                   Grid.Row="2"
-                   VerticalOptions="End"
-                   Scale=".5"
-                   x:Name="videoButton"
-                   TranslationY="8" >
-             </Image>
             
         </Grid>
-        
-       
         
     </ContentPage.Content>
 </ContentPage>

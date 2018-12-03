@@ -3,6 +3,7 @@ using System.IO;
 using System.Threading.Tasks;
 
 using Octane.Xamarin.Forms.VideoPlayer; // For the video player
+using Octane.Xamarin.Forms.VideoPlayer.Constants;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -37,5 +38,48 @@ namespace SigningTime
         }
 
 
+        private void BackButton(object sender, System.EventArgs e)
+        {
+            videoPlayer.Pause();
+            Navigation.PopAsync();
+        }
+
+        /// <summary>
+        /// When the user navigates away from this page via the TabbedPage, the
+        /// video will automatically pause.
+        /// </summary>
+        protected override void OnDisappearing()
+        {
+            videoPlayer.Pause();
+            base.OnDisappearing();
+        }
+
+        /// <summary>
+        /// If the user navigated away from this page when the video was in the 
+        /// middle of playing, this will resume where the user left off.
+        /// </summary>
+        protected override void OnAppearing()
+        {
+            if (videoPlayer.State.Equals(PlayerState.Paused))
+            {
+                videoPlayer.Play();
+            }
+
+            base.OnAppearing();
+        }
+
+        /// <summary>
+        /// Pauses the video. This is needed by other functions within the app.
+        /// With the Xamarin VideoPlayer, if the app navigates away from the 
+        /// video while it's playing, the app will crash. This function allows, 
+        /// in particular, the TabbedPage to pause the video before it navigates
+        /// away. A custom tabbed page renderer was create to handle this in 
+        /// iOS. This is not an issue with Android, so no renderer has been made
+        /// for Android.
+        /// </summary>
+        public void pauseVideo()
+        {
+            videoPlayer.Pause();
+        }
     }
 }

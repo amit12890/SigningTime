@@ -95,6 +95,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CustomTabsRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Media.xcassets\Contents.json" />
@@ -239,6 +240,10 @@
     <ImageAsset Include="Assets.xcassets\potty_illustration.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\water_illustration.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\where_illustration.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\filler_bar_bottom.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\filler_bar_bottom.imageset\filler_bar_bottom.png" />
+    <ImageAsset Include="Assets.xcassets\filler_bar_top.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\filler_bar_top.imageset\filler_bar_top.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -340,5 +345,7 @@
     <Folder Include="Assets.xcassets\potty_illustration.imageset\" />
     <Folder Include="Assets.xcassets\water_illustration.imageset\" />
     <Folder Include="Assets.xcassets\where_illustration.imageset\" />
+    <Folder Include="Assets.xcassets\filler_bar_bottom.imageset\" />
+    <Folder Include="Assets.xcassets\filler_bar_top.imageset\" />
   </ItemGroup>
 </Project>
