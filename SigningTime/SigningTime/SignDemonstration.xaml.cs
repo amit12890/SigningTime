@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 
 using Octane.Xamarin.Forms.VideoPlayer; // For the video player
 using Octane.Xamarin.Forms.VideoPlayer.Constants;
+using Octane.Xamarin.Forms.VideoPlayer.Events;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -22,6 +23,8 @@ namespace SigningTime
     public partial class SignDemonstration : ContentPage
     {
 
+        private Sign sign;
+
         public SignDemonstration() { InitializeComponent(); }
 
 
@@ -33,7 +36,22 @@ namespace SigningTime
             InitializeComponent();
 
             // Prep the VideoPlayer with the correct video file
-            videoPlayer.Source = VideoSource.FromResource(tappedSign.Name + ".mp4");
+            sign = tappedSign;
+            videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
+
+            // Set up pause/play icons to switch based on player state
+            videoPlayer.Paused += (object sender, VideoPlayerEventArgs e) => {
+                videoButton.Source = "video_play_icon";
+            };
+            videoPlayer.Playing
+             += (object sender, VideoPlayerEventArgs e) => {
+                videoButton.Source = "video_pause_icon";
+            };
+
+            // Set up the play icon to reset when video completes
+            videoPlayer.Completed += (object sender, VideoPlayerEventArgs e) => {
+                videoButton.Source = "video_play_icon";
+            };
 
         }
 
@@ -55,17 +73,21 @@ namespace SigningTime
         }
 
         /// <summary>
-        /// If the user navigated away from this page when the video was in the 
-        /// middle of playing, this will resume where the user left off.
+        /// Togles whether the video is playing or paused.
         /// </summary>
-        protected override void OnAppearing()
+        private void ToggleVideoPlayback()
         {
-            if (videoPlayer.State.Equals(PlayerState.Paused))
+            if (videoPlayer.State.Equals(PlayerState.Playing)){
+                videoPlayer.Pause();
+            }
+            else if (videoPlayer.State.Equals(PlayerState.Paused))
             {
                 videoPlayer.Play();
             }
-
-            base.OnAppearing();
+            else if (videoPlayer.State.Equals(PlayerState.Completed))
+            {
+                videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
+            }
         }
 
         /// <summary>

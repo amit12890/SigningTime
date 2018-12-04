@@ -140,7 +140,6 @@
     <ImageAsset Include="Media.xcassets\LaunchImage.launchimage\Default-Portrait.png" />
     <ImageAsset Include="Media.xcassets\LaunchImage.launchimage\Default-Portrait%402x.png" />
     <ImageAsset Include="Assets.xcassets\flip_icon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\flip_icon.imageset\playvideoArtboard 1.png" />
     <ImageAsset Include="Assets.xcassets\video_play_icon.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\video_play_icon.imageset\video.png" />
     <ImageAsset Include="Assets.xcassets\video_pause_icon.imageset\Contents.json" />
@@ -244,6 +243,33 @@
     <ImageAsset Include="Assets.xcassets\filler_bar_bottom.imageset\filler_bar_bottom.png" />
     <ImageAsset Include="Assets.xcassets\filler_bar_top.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\filler_bar_top.imageset\filler_bar_top.png" />
+    <ImageAsset Include="Assets.xcassets\back_arrow.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\back_arrow.imageset\back_arrow.png" />
+    <ImageAsset Include="Assets.xcassets\flip_icon.imageset\flip.png" />
+    <ImageAsset Include="Assets.xcassets\baby_illustration.imageset\baby.png" />
+    <ImageAsset Include="Assets.xcassets\banana_illustration.imageset\banana.png" />
+    <ImageAsset Include="Assets.xcassets\bird_illustration.imageset\bird.png" />
+    <ImageAsset Include="Assets.xcassets\cat_illustration.imageset\cat.png" />
+    <ImageAsset Include="Assets.xcassets\cereal_illustration.imageset\cereal.png" />
+    <ImageAsset Include="Assets.xcassets\cracker_illustration.imageset\cracker.png" />
+    <ImageAsset Include="Assets.xcassets\dad_illustration.imageset\dad.png" />
+    <ImageAsset Include="Assets.xcassets\diaper_illustration.imageset\diaper.png" />
+    <ImageAsset Include="Assets.xcassets\dog_illustration.imageset\dog.png" />
+    <ImageAsset Include="Assets.xcassets\drink_illustration.imageset\drink.png" />
+    <ImageAsset Include="Assets.xcassets\finished_illustration.imageset\Finished.png" />
+    <ImageAsset Include="Assets.xcassets\fish_illustration.imageset\fish.png" />
+    <ImageAsset Include="Assets.xcassets\frog_illustration.imageset\frog.png" />
+    <ImageAsset Include="Assets.xcassets\grandma_illustration.imageset\Grandma.png" />
+    <ImageAsset Include="Assets.xcassets\grandpa_illustration.imageset\Grandpa.png" />
+    <ImageAsset Include="Assets.xcassets\horse_illustration.imageset\horse.png" />
+    <ImageAsset Include="Assets.xcassets\hurt_illustration.imageset\hurt.png" />
+    <ImageAsset Include="Assets.xcassets\juice_illustration.imageset\juice.png" />
+    <ImageAsset Include="Assets.xcassets\milk_illustration.imageset\milk.png" />
+    <ImageAsset Include="Assets.xcassets\mom_illustration.imageset\Mom.png" />
+    <ImageAsset Include="Assets.xcassets\more_illustration.imageset\more.png" />
+    <ImageAsset Include="Assets.xcassets\potty_illustration.imageset\potty.png" />
+    <ImageAsset Include="Assets.xcassets\water_illustration.imageset\water.png" />
+    <ImageAsset Include="Assets.xcassets\where_illustration.imageset\where.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -268,6 +294,12 @@
     <BundleResource Include="Resources\FredokaOne-Regular.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
+    <BundleResource Include="Resources\SignikaNegative-Bold.ttf" />
+    <BundleResource Include="Resources\SignikaNegative-SemiBold.ttf" />
+    <BundleResource Include="Resources\SignikaNegative-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\SignikaNegative-Light.ttf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -347,5 +379,7 @@
     <Folder Include="Assets.xcassets\where_illustration.imageset\" />
     <Folder Include="Assets.xcassets\filler_bar_bottom.imageset\" />
     <Folder Include="Assets.xcassets\filler_bar_top.imageset\" />
+    <Folder Include="Assets.xcassets\back_arrow.imageset\" />
+    <Folder Include="Assets.xcassets\flip.imageset\" />
   </ItemGroup>
 </Project>

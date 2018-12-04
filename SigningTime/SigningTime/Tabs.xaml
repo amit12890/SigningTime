@@ -14,8 +14,6 @@
         </x:Arguments>
     </NavigationPage>
     
-    <local:SignDictionary Title="Dictionary" Icon=""/>
-    
     <!-- Flashcards -->
     <NavigationPage Title="Flash Cards" Icon="FlashIcon">
         <x:Arguments>

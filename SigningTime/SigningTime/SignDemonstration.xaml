@@ -9,11 +9,11 @@
         
         
         <!-- Inner grid is what makes up the actual card itself -->
-        <Grid BackgroundColor="#FEF7DD" RowSpacing="0">
+        <Grid BackgroundColor="#FFFDEE" RowSpacing="0">
             
             <Grid.RowDefinitions>
-                <RowDefinition Height="10*" />
-                <RowDefinition Height="80*" />
+                <RowDefinition Height="12*" />
+                <RowDefinition Height="78*" />
                 <RowDefinition Height="10*" />
             </Grid.RowDefinitions>
             
@@ -45,39 +45,43 @@
                                    iOS="FredokaOne-Regular"
                                    Android="FredokaOne-Regular.ttf#Fredoka One" />
                    </Label.FontFamily>
-               </Label>
+              </Label>
             
             <RelativeLayout Grid.Row="0"
                             HorizontalOptions="FillAndExpand"
-                            VerticalOptions="FillAndExpand">
-                <Button Text="Back"
-                        Margin="0"
-                        Clicked="BackButton"
-                        x:Name="currentCardNumber"
-                        FontSize="Small"
-                        FontAttributes="Bold"
-                        TextColor="#EEEEEE"
-                        RelativeLayout.XConstraint="{ConstraintExpression
+                            VerticalOptions="CenterAndExpand">
+                <Image Source="back_arrow"
+                       WidthRequest="30"
+                       HeightRequest="20"
+                       RelativeLayout.XConstraint="{ConstraintExpression
                             Type=RelativeToParent,
                             Property=Width,
                             Factor=0.0,
-                            Constant=20}"
+                            Constant=30}"
                        RelativeLayout.YConstraint="{ConstraintExpression
                             Type=RelativeToParent,
                             Property=Height,
                             Factor=0.0,
-                            Constant=25}"/>
+                            Constant=35}">
+                       <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                            Tapped="BackButton"
+                            NumberOfTapsRequired="1" />
+                       </Image.GestureRecognizers>
+                    </Image>
+                    
             </RelativeLayout>
             
             <!-- VIDEO / MIDDLE PORTION -->
             <o:VideoPlayer
+                DisplayControls="false"
+                FillMode="ResizeAspect"
                 Grid.Row="1"
                 x:Name="videoPlayer"
                 AutoPlay="true"
                 VerticalOptions="Center"
                 BackgroundColor="#Color.Transparent"/>
             
-           
            <StackLayout
                 VerticalOptions="FillAndExpand"
                 HorizontalOptions="Fill"
@@ -86,6 +90,20 @@
                 <Image Source="card_bottom"
                   VerticalOptions="End" />
            </StackLayout>
+            
+            
+           <Image Source="video_play_icon"
+                   Grid.Row="2"
+                   VerticalOptions="End"
+                   Scale=".5"
+                   x:Name="videoButton"
+                   TranslationY="5" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="ToggleVideoPlayback"
+                        NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+           </Image>
             
         </Grid>
         

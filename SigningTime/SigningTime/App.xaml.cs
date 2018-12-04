@@ -20,7 +20,6 @@ namespace SigningTime
             // NavigationPage sets the page into something that can be
             // added to the navigation stack. Allows the back arrow in the 
             // Navigation Bar.
-            //MainPage = new NavigationPage(new SignDictionary());
 
             if (Device.RuntimePlatform == (Device.iOS))
             {

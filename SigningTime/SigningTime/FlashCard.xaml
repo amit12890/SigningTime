@@ -5,7 +5,7 @@
              x:Class="SigningTime.FlashCard"
              NavigationPage.HasNavigationBar="false"
              BackgroundColor="#333333"
-             Padding="20, 50, 20, 20" >
+             Padding="20, 40, 20, 20" >
     
     <!-- Outer grid intended for layering (specifically the video overlay) -->
     <Grid x:Name="outerLayout"
@@ -90,7 +90,20 @@
                   Grid.Row="2"
                   VerticalOptions="End"
                   HorizontalOptions="Center"/>
-                    
+            
+            <Image Source="back_arrow"
+                   Grid.Row="2"
+                   VerticalOptions="End"
+                   HorizontalOptions="Start"
+                   Scale="0.5"
+                   TranslationY="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="BackButton"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>        
+                </Image>
+                   
             <Image Source="video_play_icon"
                    Grid.Row="2"
                    VerticalOptions="End"
@@ -103,6 +116,21 @@
                         NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
            </Image>
+            
+           <Image Source="flip_icon"
+                  Grid.Row="2"
+                  VerticalOptions="End"
+                  HorizontalOptions="End"
+                  Scale="0.5"
+                  TranslationY="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="FlipCard"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>        
+                </Image>
+            
+            
         </Grid>
         
         <!-- Video Player -->

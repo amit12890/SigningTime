@@ -93,6 +93,22 @@ namespace SigningTime
                 videoPlayer.FadeTo(1, 200);
                 videoPlayer.Play();
             }
+            else if (Device.RuntimePlatform.Equals(Device.Android))
+            {
+                videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
+
+                // Hide underlying text and static image
+                signDescription.FadeTo(0.1, 300);
+                signImage.FadeTo(0.1, 300);
+
+                // Set up and start the video
+                cardInVideoMode = true;
+                videoPlayer.Opacity = 0;
+                videoPlayer.IsVisible = true;
+                videoPlayer.FadeTo(1, 200);
+
+                videoPlayer.Play();
+            }
         }
 
         /// <summary>
@@ -205,6 +221,12 @@ namespace SigningTime
             videoPlayer.IsVisible = false;
             videoButton.Source = "video_play_icon";
             videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
+        }
+
+
+        private void BackButton()
+        {
+            // TODO: back to deck selection
         }
     }
 }
