@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
         
         <!-- Inner grid is what makes up the actual card itself -->
-        <Grid x:Name="card" BackgroundColor="#FEF7DD"
+        <Grid x:Name="card" BackgroundColor="#FFFDEE"
               RowSpacing="0">
             
             <Grid.RowDefinitions>
@@ -39,8 +39,8 @@
                        VerticalOptions="Start"/> 
             </StackLayout>
             
-            <Label Text="eat"
-                   Grid.Row="0"
+            <Label Grid.Row="0"
+                   IsVisible="false"
                    x:Name="signName"
                    FontSize="35"
                    TextColor="#EEEEEE"
@@ -73,14 +73,15 @@
 
             
             <!-- MIDDLE PORTION -->
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua."
+            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                   IsVisible="false"
                    x:Name="signDescription"
                    Margin="40,30,40,10"
                    Grid.Row="1"/>
             
-            <!-- BOTTOM PORTION -->
             
-           <Image Source="eat_sign"
+            <!-- BOTTOM PORTION -->
+           <Image IsVisible="false"
                   Grid.Row="2"
                   Margin="10,20,10,55"
                   VerticalOptions="End"
@@ -105,6 +106,7 @@
                 </Image>
                    
             <Image Source="video_play_icon"
+                   IsVisible="false"
                    Grid.Row="2"
                    VerticalOptions="End"
                    Scale=".5"
@@ -132,6 +134,20 @@
             
             
         </Grid>
+        
+        <!-- Illustration Image -->
+        <Image 
+            Grid.Row="0"
+            x:Name="illustrationImage"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Aspect="AspectFit"
+            Scale="0.8"
+            Margin="20, 70, 20, 70" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="FlipCard" />
+            </Image.GestureRecognizers>
+        </Image>
         
         <!-- Video Player -->
         <o:VideoPlayer

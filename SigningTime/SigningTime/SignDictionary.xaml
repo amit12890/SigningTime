@@ -3,20 +3,21 @@
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               x:Class="SigningTime.SignDictionary"
               NavigationPage.HasNavigationBar="false"
-              BackgroundColor="White" >
+              BackgroundColor="#F17882" >
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
-                    iOS="0,40,0,0"
+                    iOS="0,30,0,0"
                     Android="0,0,0,0" />
     </ContentPage.Padding>
 
     <ListView x:Name="signList"
         SeparatorVisibility="Default"
+        SeparatorColor="#F17882"
         ItemsSource="{Binding Items}"
         ItemTapped="Handle_ItemTapped"
         CachingStrategy="RecycleElement"
         HasUnevenRows="true"
-        BackgroundColor="White">
+        BackgroundColor="#FFFDEE">
         
         <!--Built in Cells-->
         <ListView.ItemTemplate>

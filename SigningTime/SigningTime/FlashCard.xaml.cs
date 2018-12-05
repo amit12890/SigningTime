@@ -31,29 +31,16 @@ namespace SigningTime
             signName.Text = sign.Name;
             signDescription.Text = sign.Description;
             signImage.Source = sign.Name + "_sign";
-
-            // Hide/Display the correct views for the card's front
-            signName.IsVisible = false;
-            signDescription.IsVisible = false;
-            signImage.IsVisible = true;
-            videoButton.IsVisible = false;
-
-            // Set up the VideoPlayer object
+            illustrationImage.Source = sign.Name + "_illustration";
             videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
+
             // Registers what to do with the video player based on video state
             videoPlayer.Completed += (object sender, VideoPlayerEventArgs e) => {
                 HideVideo();
             };
 
-            // Add the video to the layout
-            outerLayout.Children.Add(videoPlayer);
-            outerLayout.RaiseChild(videoPlayer);
-
-            if (sign.Name.Equals("eat"))
-            {
-                signImage.Source = "eat_illustration";
-            }
-
+            // Brings the video player to the front of the stack
+            // outerLayout.RaiseChild(videoPlayer);
         }
 
         /// <summary>
@@ -139,10 +126,7 @@ namespace SigningTime
                 signDescription.IsVisible = true;
                 signImage.IsVisible = true;
                 videoButton.IsVisible = true;
-
-                if (sign.Name.Equals("eat")){
-                    signImage.Source = "eat_sign";
-                }
+                illustrationImage.IsVisible = false;
 
                 if (cardInVideoMode)
                 {
@@ -159,13 +143,10 @@ namespace SigningTime
             // Switching card to the front
             else
             {
-                if (sign.Name.Equals("eat"))
-                {
-                    signImage.Source = "eat_illustration";
-                }
 
                 front = true;
-                signImage.IsVisible = true;
+                illustrationImage.IsVisible = true;
+                signImage.IsVisible = false;
                 signImage.Opacity = 1;
                 signDescription.Opacity = 1;
                 signName.IsVisible = false;
