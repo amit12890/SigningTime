@@ -18,8 +18,6 @@ namespace SigningTime
         {
             InitializeComponent();
 
-            // TODO: Add other stuff associated to the signs, particularly the videos
-            // Signs that are commented out don't have a video clip for them
             ListOfSigns = new ObservableCollection<Sign>
             {
                 new Sign { Name = "again" },
@@ -60,7 +58,7 @@ namespace SigningTime
                 //new Sign { Name = "talent" },
                 //new Sign { Name = "time" },
                 new Sign { Name = "water" },
-                new Sign { Name = "where" }, // TODO: NEED THIS VIDEO DOWNLOADED
+                new Sign { Name = "where" }
             };
 			
 			signList.ItemsSource = ListOfSigns;

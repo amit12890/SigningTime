@@ -5,7 +5,7 @@
              x:Class="SigningTime.FlashCard"
              NavigationPage.HasNavigationBar="false"
              BackgroundColor="#333333"
-             Padding="20, 40, 20, 20" >
+             Padding="20, 30, 20, 20" >
     
     <!-- Outer grid intended for layering (specifically the video overlay) -->
     <Grid x:Name="outerLayout"
@@ -54,8 +54,7 @@
                </Label>
             
             <RelativeLayout Grid.Row="0"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="FillAndExpand">
+                            HorizontalOptions="End">
                 <Label Text="xx/xx"
                         x:Name="currentCardNumber"
                         FontSize="Small"
@@ -64,27 +63,30 @@
                         RelativeLayout.XConstraint="{ConstraintExpression
                             Type=RelativeToParent,
                             Property=Width,
-                            Factor= 0.84 }"
+                            Factor=0.05}"
                        RelativeLayout.YConstraint="{ConstraintExpression
                             Type=RelativeToParent,
                             Property=Height,
-                            Factor=0.1}"/>
+                            Factor=0,
+                            Constant=10}"/>
             </RelativeLayout>
 
             
             <!-- MIDDLE PORTION -->
             <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                   IsVisible="false"
                    x:Name="signDescription"
+                   IsVisible="false"
+                   XAlign="Center"
                    Margin="40,30,40,10"
                    Grid.Row="1"/>
             
             
             <!-- BOTTOM PORTION -->
            <Image IsVisible="false"
+                  Aspect="AspectFit"
                   Grid.Row="2"
-                  Margin="10,20,10,55"
-                  VerticalOptions="End"
+                  Margin="10,0,10,55"
+                  VerticalOptions="EndAndExpand"
                   x:Name="signImage" />
             
            <Image Source="card_bottom"
@@ -94,6 +96,7 @@
             
             <Image Source="back_arrow"
                    Grid.Row="2"
+                   IsVisible="false"
                    VerticalOptions="End"
                    HorizontalOptions="Start"
                    Scale="0.5"
@@ -119,35 +122,45 @@
                 </Image.GestureRecognizers>
            </Image>
             
-           <Image Source="flip_icon"
-                  Grid.Row="2"
-                  VerticalOptions="End"
-                  HorizontalOptions="End"
-                  Scale="0.5"
-                  TranslationY="0">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="FlipCard"
-                            NumberOfTapsRequired="1" />
-                    </Image.GestureRecognizers>        
-                </Image>
-            
-            
         </Grid>
         
         <!-- Illustration Image -->
-        <Image 
+        <StackLayout
             Grid.Row="0"
-            x:Name="illustrationImage"
             VerticalOptions="Center"
             HorizontalOptions="Center"
-            Aspect="AspectFit"
-            Scale="0.8"
+            Spacing="0"
             Margin="20, 70, 20, 70" >
-            <Image.GestureRecognizers>
+            
+            <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer Tapped="FlipCard" />
-            </Image.GestureRecognizers>
-        </Image>
+            </StackLayout.GestureRecognizers>
+            
+            <Image 
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                x:Name="illustrationImage"
+                Aspect="AspectFill"
+                Scale="0.8" />
+
+            <Label
+                x:Name="illustrationText"
+                Text="word"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                TextColor="#F17882"
+                FontSize="50">
+               <Label.FontFamily> 
+                   <OnPlatform x:TypeArguments="x:String"
+                               iOS="FredokaOne-Regular"
+                               Android="FredokaOne-Regular.ttf#Fredoka One" />
+               </Label.FontFamily>
+            </Label>
+                
+                
+        </StackLayout>
+        
+
         
         <!-- Video Player -->
         <o:VideoPlayer

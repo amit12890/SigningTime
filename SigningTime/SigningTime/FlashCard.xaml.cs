@@ -29,6 +29,7 @@ namespace SigningTime
             // Sets up the card's Views with correct values
             currentCardNumber.Text = "(" + cardNumber + "/" + numOfCards + ")";
             signName.Text = sign.Name;
+            illustrationText.Text = sign.Name;
             signDescription.Text = sign.Description;
             signImage.Source = sign.Name + "_sign";
             illustrationImage.Source = sign.Name + "_illustration";

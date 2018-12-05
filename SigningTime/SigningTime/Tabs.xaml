@@ -28,11 +28,14 @@
     </ContentPage>
     
     <!-- Information -->
-    <NavigationPage Title="Info" Icon="InfoIcon">
-        <x:Arguments>
-            <local:Info />
-        </x:Arguments>
-    </NavigationPage>
+    <ContentPage Title="Info" Icon="InfoIcon">
+        <ScrollView>
+            <StackLayout>
+                <BoxView BackgroundColor="Red" HeightRequest="600" WidthRequest="150" />
+                <Entry />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
                  
 
 </TabbedPage>

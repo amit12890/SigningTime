@@ -4,17 +4,15 @@
       "idiom": "universal"
     },
     {
-      "filename": "eat 320.png",
+      "filename": "eat_sign.png",
       "scale": "1x",
       "idiom": "universal"
     },
     {
-      "filename": "eat 640.png",
       "scale": "2x",
       "idiom": "universal"
     },
     {
-      "filename": "eat 960.png",
       "scale": "3x",
       "idiom": "universal"
     },
