@@ -4547,7 +4547,7 @@ namespace SigningTime.Droid
 			public const int filler_bar_top = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int Finished_illustration = 2130837620;
+			public const int finished_illustration = 2130837620;
 			
 			// aapt resource value: 0x7f020075
 			public const int fish_illustration = 2130837621;
@@ -4562,13 +4562,13 @@ namespace SigningTime.Droid
 			public const int frog_sign = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int Grandma_illustration = 2130837625;
+			public const int grandma_illustration = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
 			public const int grandma_sign = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int Grandpa_illustration = 2130837627;
+			public const int grandpa_illustration = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
 			public const int grandpa_sign = 2130837628;
@@ -5126,13 +5126,13 @@ namespace SigningTime.Droid
 			public const int MISSING = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int Mom_illustration = 2130837813;
+			public const int mom_illustration = 2130837813;
 			
 			// aapt resource value: 0x7f020136
 			public const int mom_sign = 2130837814;
 			
 			// aapt resource value: 0x7f020137
-			public const int more = 2130837815;
+			public const int more_illustration = 2130837815;
 			
 			// aapt resource value: 0x7f020138
 			public const int more_sign = 2130837816;

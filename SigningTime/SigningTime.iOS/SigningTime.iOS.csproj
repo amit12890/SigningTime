@@ -195,10 +195,6 @@
     <ImageAsset Include="Assets.xcassets\potty_illustration.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\water_illustration.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\where_illustration.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\filler_bar_bottom.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\filler_bar_bottom.imageset\filler_bar_bottom.png" />
-    <ImageAsset Include="Assets.xcassets\filler_bar_top.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\filler_bar_top.imageset\filler_bar_top.png" />
     <ImageAsset Include="Assets.xcassets\back_arrow.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\back_arrow.imageset\back_arrow.png" />
     <ImageAsset Include="Assets.xcassets\flip_icon.imageset\flip.png" />
@@ -259,6 +255,8 @@
     <ImageAsset Include="Assets.xcassets\marketing_rachel_and_me.imageset\marketing_rachel_and_me.png" />
     <ImageAsset Include="Assets.xcassets\marketing_signing_time.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\marketing_signing_time.imageset\marketing_signing_time.png" />
+    <ImageAsset Include="Assets.xcassets\filler_bar_bottom.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\filler_bar_bottom.imageset\filler_bar_bottom.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -366,7 +364,6 @@
     <Folder Include="Assets.xcassets\potty_illustration.imageset\" />
     <Folder Include="Assets.xcassets\water_illustration.imageset\" />
     <Folder Include="Assets.xcassets\where_illustration.imageset\" />
-    <Folder Include="Assets.xcassets\filler_bar_bottom.imageset\" />
     <Folder Include="Assets.xcassets\filler_bar_top.imageset\" />
     <Folder Include="Assets.xcassets\back_arrow.imageset\" />
     <Folder Include="Assets.xcassets\flip.imageset\" />
@@ -374,5 +371,6 @@
     <Folder Include="Assets.xcassets\marketing_christmas.imageset\" />
     <Folder Include="Assets.xcassets\marketing_rachel_and_me.imageset\" />
     <Folder Include="Assets.xcassets\marketing_signing_time.imageset\" />
+    <Folder Include="Assets.xcassets\filler_bar_bottom.imageset\" />
   </ItemGroup>
 </Project>

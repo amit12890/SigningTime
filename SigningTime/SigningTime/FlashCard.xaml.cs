@@ -29,19 +29,24 @@ namespace SigningTime
             // Sets up the card's Views with correct values
             currentCardNumber.Text = "(" + cardNumber + "/" + numOfCards + ")";
             signName.Text = sign.Name;
-            illustrationText.Text = sign.Name;
             signDescription.Text = sign.Description;
             signImage.Source = sign.Name + "_sign";
             illustrationImage.Source = sign.Name + "_illustration";
-            videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
 
             // Registers what to do with the video player based on video state
             videoPlayer.Completed += (object sender, VideoPlayerEventArgs e) => {
                 HideVideo();
+                videoButton.Source = "video_play_icon";
+            };
+            videoPlayer.Playing += (object sender, VideoPlayerEventArgs e) =>
+            {
+                videoButton.Source = "video_pause_icon";
+            };
+            videoPlayer.Paused += (object sender, VideoPlayerEventArgs e) =>
+            {
+                videoButton.Source = "video_play_icon";
             };
 
-            // Brings the video player to the front of the stack
-            // outerLayout.RaiseChild(videoPlayer);
         }
 
         /// <summary>
@@ -60,29 +65,13 @@ namespace SigningTime
         private void DemonstrateSign(object sender, System.EventArgs e)
         {
             if(videoPlayer.State.Equals(PlayerState.Playing)){
-                videoButton.Source = "video_play_icon";
                 videoPlayer.Pause();
             }
             else if(videoPlayer.State.Equals(PlayerState.Paused)){
-                videoButton.Source = "video_pause_icon";
                 videoPlayer.Play();
             }
-            else if(videoPlayer.State.Equals(PlayerState.Prepared)){
-                videoButton.Source = "video_pause_icon";
-
-                // Hide underlying text and static image
-                signDescription.FadeTo(0.1, 300);
-                signImage.FadeTo(0.1, 300);
-
-                // Set up and start the video
-                cardInVideoMode = true;
-                videoPlayer.Opacity = 0;
-                videoPlayer.IsVisible = true;
-                videoPlayer.FadeTo(1, 200);
-                videoPlayer.Play();
-            }
-            else if (Device.RuntimePlatform.Equals(Device.Android))
-            {
+            else {
+                videoPlayer.AutoPlay = true; // So the video plays when loaded
                 videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
 
                 // Hide underlying text and static image
@@ -94,8 +83,6 @@ namespace SigningTime
                 videoPlayer.Opacity = 0;
                 videoPlayer.IsVisible = true;
                 videoPlayer.FadeTo(1, 200);
-
-                videoPlayer.Play();
             }
         }
 
@@ -112,18 +99,23 @@ namespace SigningTime
 
             if(cardInVideoMode){
                 videoPlayer.Pause();
-                videoButton.Source = "video_play_icon";
+
+                // Hide video on android because its rotation is ugly
+                if(Device.RuntimePlatform == (Device.Android))
+                {
+                    HideVideo();
+
+                }
             }
 
             // Rotates the card 90 degrees
-            await outerLayout.RotateYTo(-90, speed, Easing.SpringIn);
-            outerLayout.RotationY = -270;
+            await card.RotateYTo(-90, speed, Easing.SpringIn);
+            card.RotationY = -270;
 
             // Switching card to the back
             if (front)
             {
                 front = false;
-                signName.IsVisible = true;
                 signDescription.IsVisible = true;
                 signImage.IsVisible = true;
                 videoButton.IsVisible = true;
@@ -144,21 +136,19 @@ namespace SigningTime
             // Switching card to the front
             else
             {
-
                 front = true;
                 illustrationImage.IsVisible = true;
                 signImage.IsVisible = false;
                 signImage.Opacity = 1;
                 signDescription.Opacity = 1;
-                signName.IsVisible = false;
                 signDescription.IsVisible = false;
                 videoButton.IsVisible = false;
                 videoPlayer.IsVisible = false;
             }
 
             // Continues rotating the card the remaining 90 degrees
-            await outerLayout.RotateYTo(-360, speed, Easing.SpringOut);
-            outerLayout.RotationY = 0;
+            await card.RotateYTo(-360, speed, Easing.SpringOut);
+            card.RotationY = 0;
         }
 
         /// <summary>
@@ -186,8 +176,6 @@ namespace SigningTime
             cardInVideoMode = false;
             await videoPlayer.FadeTo(0, 200);
             videoPlayer.IsVisible = false;
-            videoButton.Source = "video_play_icon";
-            videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
         }
 
         /// <summary>
@@ -201,14 +189,10 @@ namespace SigningTime
             signDescription.Opacity = 1;
             cardInVideoMode = false;
             videoPlayer.IsVisible = false;
-            videoButton.Source = "video_play_icon";
+            videoPlayer.AutoPlay = false;
             videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
         }
 
 
-        private void BackButton()
-        {
-            // TODO: back to deck selection
-        }
     }
 }
