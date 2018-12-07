@@ -102,7 +102,6 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\baseline_book_black_24.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\baseline_book_black_36.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\baseline_book_black_48.png" />
-    <AndroidResource Include="Resources\drawable\again_sign.png" />
     <AndroidResource Include="Resources\drawable\cat_sign.png" />
     <AndroidResource Include="Resources\drawable\dad_sign.png" />
     <AndroidResource Include="Resources\drawable\dog_sign.png" />
@@ -114,7 +113,6 @@
     <AndroidResource Include="Resources\drawable\MISSING.png" />
     <AndroidResource Include="Resources\drawable\mom_sign.png" />
     <AndroidResource Include="Resources\drawable\more_sign.png" />
-    <AndroidResource Include="Resources\drawable\new_sign.png" />
     <AndroidResource Include="Resources\drawable\potty_sign.png" />
     <AndroidResource Include="Resources\drawable\where_sign.png" />
     <AndroidResource Include="Resources\drawable\splash_background.xml" />

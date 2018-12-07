@@ -20,18 +20,15 @@ namespace SigningTime
 
             ListOfSigns = new ObservableCollection<Sign>
             {
-                new Sign { Name = "again" },
                 new Sign { Name = "baby" },
                 new Sign { Name = "banana" },
                 new Sign { Name = "bird" },
-                new Sign { Name = "car" },
                 new Sign { Name = "cat" },
                 new Sign { Name = "cereal" },
                 new Sign { Name = "cracker" },
                 new Sign { Name = "dad" },
                 new Sign { Name = "diaper" },
                 new Sign { Name = "dog" },
-                new Sign { Name = "dream" },
                 new Sign { Name = "drink" },
                 new Sign { Name = "eat" },
                 new Sign { Name = "finished" },
@@ -41,22 +38,11 @@ namespace SigningTime
                 new Sign { Name = "grandpa" },
                 new Sign { Name = "horse" },
                 new Sign { Name = "hurt" }, // LONGER THAN 15sec
-                //new Sign { Name = "I love you" },
                 new Sign { Name = "juice" },
-                new Sign { Name = "love" },
-                //new Sign { Name = "many" },
                 new Sign { Name = "milk" },
                 new Sign { Name = "mom" },
                 new Sign { Name = "more" },
-                new Sign { Name = "new" },
-                //new Sign { Name = "now" },
                 new Sign { Name = "potty" },
-                //new Sign { Name = "signing" },
-                //new Sign { Name = "special" },
-                //new Sign { Name = "spirit" },
-                //new Sign { Name = "sweet" },
-                //new Sign { Name = "talent" },
-                //new Sign { Name = "time" },
                 new Sign { Name = "water" },
                 new Sign { Name = "where" }
             };

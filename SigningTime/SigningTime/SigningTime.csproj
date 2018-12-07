@@ -12,22 +12,17 @@
   <ItemGroup>
     <None Remove="video\cracker.mp4" />
     <None Remove="video\banana.mp4" />
-    <None Remove="videos\again.mp4" />
     <None Remove="videos\all done.mp4" />
     <None Remove="videos\baby.mp4" />
     <None Remove="videos\banana.mp4" />
-    <None Remove="videos\bath.mp4" />
     <None Remove="videos\bird.mp4" />
-    <None Remove="videos\book.mp4" />
     <None Remove="again.mp4" />
-    <None Remove="videos\car.mp4" />
     <None Remove="videos\cat.mp4" />
     <None Remove="videos\cereal.mp4" />
     <None Remove="videos\cracker.mp4" />
     <None Remove="videos\dad.mp4" />
     <None Remove="videos\diaper.mp4" />
     <None Remove="videos\dog.mp4" />
-    <None Remove="videos\dream.mp4" />
     <None Remove="videos\drink.mp4" />
     <None Remove="videos\eat.mp4" />
     <None Remove="videos\finished.mp4" />
@@ -37,7 +32,6 @@
     <None Remove="videos\horse.mp4" />
     <None Remove="videos\hurt.mp4" />
     <None Remove="videos\juice.mp4" />
-    <None Remove="videos\love.mp4" />
     <None Remove="videos\milk.mp4" />
     <None Remove="videos\mom.mp4" />
     <None Remove="videos\more.mp4" />
@@ -57,20 +51,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="videos\again.mp4" />
     <EmbeddedResource Include="videos\baby.mp4" />
     <EmbeddedResource Include="videos\banana.mp4" />
-    <EmbeddedResource Include="videos\bath.mp4" />
     <EmbeddedResource Include="videos\bird.mp4" />
-    <EmbeddedResource Include="videos\book.mp4" />
-    <EmbeddedResource Include="videos\car.mp4" />
     <EmbeddedResource Include="videos\cat.mp4" />
     <EmbeddedResource Include="videos\cereal.mp4" />
     <EmbeddedResource Include="videos\cracker.mp4" />
     <EmbeddedResource Include="videos\dad.mp4" />
     <EmbeddedResource Include="videos\diaper.mp4" />
     <EmbeddedResource Include="videos\dog.mp4" />
-    <EmbeddedResource Include="videos\dream.mp4" />
     <EmbeddedResource Include="videos\drink.mp4" />
     <EmbeddedResource Include="videos\eat.mp4" />
     <EmbeddedResource Include="videos\finished.mp4" />
@@ -80,11 +69,9 @@
     <EmbeddedResource Include="videos\horse.mp4" />
     <EmbeddedResource Include="videos\hurt.mp4" />
     <EmbeddedResource Include="videos\juice.mp4" />
-    <EmbeddedResource Include="videos\love.mp4" />
     <EmbeddedResource Include="videos\milk.mp4" />
     <EmbeddedResource Include="videos\mom.mp4" />
     <EmbeddedResource Include="videos\more.mp4" />
-    <EmbeddedResource Include="videos\new.mp4" />
     <EmbeddedResource Include="videos\potty.mp4" />
     <EmbeddedResource Include="videos\water.mp4" />
     <EmbeddedResource Include="videos\grandma.mp4" />
