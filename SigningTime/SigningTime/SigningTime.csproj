@@ -87,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="videos\" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="FlashCards.xaml.cs" />

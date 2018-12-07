@@ -11,10 +11,10 @@
     </ContentPage.Padding>
 
     <ListView x:Name="signList"
+        ItemsSource="{Binding ListOfSigns}"
         SeparatorVisibility="Default"
         SeparatorColor="#F17882"
-        ItemsSource="{Binding Items}"
-        ItemTapped="Handle_ItemTapped"
+        ItemTapped="GoToSignDemonstration"
         CachingStrategy="RecycleElement"
         HasUnevenRows="true"
         BackgroundColor="#FFFDEE">
@@ -25,8 +25,7 @@
                 
                 <!-- INDIVIDUAL CELL LAYOUT -->
                 <ViewCell>
-                    <StackLayout Orientation="Horizontal"
-                                 Padding="5">
+                    <StackLayout Orientation="Horizontal" Padding="5">
                         
                         <Image Source="{Binding Name, StringFormat='{0}_illustration'}"
                                HeightRequest="50"

@@ -8,10 +8,9 @@ namespace SigningTime
 {
     public partial class FlashCard : ContentPage
     {
-
         private Sign sign;
         private bool front; // Represents if card front is facing out
-        private bool cardInVideoMode;
+        private bool cardInVideoMode; // If the card currently has video player up
 
         // Parameterless constructor for building the layout
         public FlashCard()
@@ -46,7 +45,6 @@ namespace SigningTime
             {
                 videoButton.Source = "video_play_icon";
             };
-
         }
 
         /// <summary>
@@ -192,7 +190,6 @@ namespace SigningTime
             videoPlayer.AutoPlay = false;
             videoPlayer.Source = VideoSource.FromResource(sign.Name + ".mp4");
         }
-
 
     }
 }
