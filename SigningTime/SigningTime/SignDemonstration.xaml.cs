@@ -1,15 +1,9 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-
-using Octane.Xamarin.Forms.VideoPlayer; // For the video player
+﻿using Octane.Xamarin.Forms.VideoPlayer; // For the video player
 using Octane.Xamarin.Forms.VideoPlayer.Constants;
 using Octane.Xamarin.Forms.VideoPlayer.Events;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-
 
 /*
  * Helpful resources related to the video playback:
