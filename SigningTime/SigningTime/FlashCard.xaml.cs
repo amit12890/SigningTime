@@ -180,7 +180,7 @@ namespace SigningTime
         /// Used by the FlashCardCarousel to completely hide a video when the
         /// user swipes away from a video to another card.
         /// </summary>
-        public void HideVideoAfterSwipe()
+        internal void HideVideoAfterSwipe()
         {
             videoPlayer.Pause();
             signImage.Opacity = 1;

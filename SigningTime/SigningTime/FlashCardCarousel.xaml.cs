@@ -61,7 +61,6 @@ namespace SigningTime
                 FlashCard flashCardPage = new FlashCard(allSigns[i], i + 1, numOfCards);
                 Children.Add(flashCardPage);
             }
-
         }
 
         /// <summary>
