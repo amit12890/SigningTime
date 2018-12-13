@@ -54,7 +54,10 @@
                             <Span Text="MySigningTime.com"
                                   x:Name="hyperlink"
                                   TextColor="Blue" >
-                            
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="MySigningTimeLink"
+                                                          NumberOfTapsRequired="1" />
+                                </Span.GestureRecognizers>
                                   <!-- Gesture Recognizer needs to go here -->
                             
                             </Span>
