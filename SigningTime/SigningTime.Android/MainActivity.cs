@@ -6,7 +6,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Plugin.MediaManager.Forms.Android; // For video playback
 using Octane.Xamarin.Forms.VideoPlayer.Android;
 
 namespace SigningTime.Droid
@@ -20,11 +19,6 @@ namespace SigningTime.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-
-            // NOW DEPRECATED BECAUSE IT'S A PIECE OF CRAP
-            // This will initialize the Video View Renderer. Instructions found here:
-            // https://www.youtube.com/watch?v=luDyX0kYzY4&t=133s
-            // VideoViewRenderer.Init();
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 

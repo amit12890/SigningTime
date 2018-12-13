@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
-using Plugin.MediaManager.Forms.iOS; // For video playback
 using Octane.Xamarin.Forms.VideoPlayer; // For NEW video playback
-using UIKit;
+using UIKit; 
 using Octane.Xamarin.Forms.VideoPlayer.iOS;
 
 namespace SigningTime.iOS
@@ -25,10 +24,6 @@ namespace SigningTime.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            // NOW DEPRICATED BECAUSE IT'S A PIECES OF CRAP
-            // This will initialize the Video View Renderer. Instructions found here:
-            // https://www.youtube.com/watch?v=luDyX0kYzY4&t=133s
-            // VideoViewRenderer.Init();
 
             global::Xamarin.Forms.Forms.Init();
 
