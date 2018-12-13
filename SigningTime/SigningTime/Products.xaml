@@ -44,6 +44,10 @@
                             <Span Text="MySigningTime.com"
                                   x:Name="hyperlink"
                                   TextColor="Blue" >
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="BabySigningTimeLink" 
+                                                          NumberOfTapsRequired="1" />
+                                </Span.GestureRecognizers>
                             </Span>
                             <Span Text=" today and use code " />
                             <Span Text="14daytrial" 

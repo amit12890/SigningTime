@@ -69,7 +69,7 @@ namespace SigningTime
         /// <summary>
         /// Togles whether the video is playing or paused.
         /// </summary>
-        private void ToggleVideoPlayback()
+        private void ToggleVideoPlayback(object sender, System.EventArgs e)
         {
             if (videoPlayer.State.Equals(PlayerState.Playing)){
                 videoPlayer.Pause();
