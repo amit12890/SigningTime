@@ -8,14 +8,14 @@
     
     <!-- NavigationPage needs a root page, so it takes the argument -->
     <!-- The Dictionary list of signs -->
-    <NavigationPage Title="Dictionary" Icon="DictionaryIcon">
+    <NavigationPage Title="Dictionary" Icon="icon_dictionary">
         <x:Arguments>
             <local:SignDictionary/>
         </x:Arguments>
     </NavigationPage>
     
     <!-- Flashcards -->
-    <NavigationPage Title="Flash Cards" Icon="FlashIcon">
+    <NavigationPage Title="Flash Cards" Icon="icon_flash_cards">
         <x:Arguments>
             <local:FlashCardCarousel />
         </x:Arguments>
@@ -23,12 +23,12 @@
     
     
     <!--Quiz -->
-    <ContentPage Title="Quiz" Icon="QuizIcon">
+    <ContentPage Title="Quiz" Icon="icon_quiz">
          <Label Text="Here's where the quiz will go" HorizontalOptions="Center" VerticalOptions="Center" />
     </ContentPage>
     
     <!-- Information -->
-    <local:Products Title="Information" Icon="InfoIcon" />
+    <local:Products Title="Information" Icon="icon_products" />
                  
 
 </TabbedPage>

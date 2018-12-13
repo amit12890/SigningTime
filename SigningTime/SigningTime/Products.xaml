@@ -54,7 +54,9 @@
                             <Span Text="MySigningTime.com"
                                   x:Name="hyperlink"
                                   TextColor="Blue" >
-
+                            
+                                  <!-- Gesture Recognizer needs to go here -->
+                            
                             </Span>
                             <Span Text=" today and use code " />
                             <Span Text="14daytrial" 

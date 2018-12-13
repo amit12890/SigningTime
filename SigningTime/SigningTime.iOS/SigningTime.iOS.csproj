@@ -99,22 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Media.xcassets\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\DictionaryIcon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\DictionaryIcon.imageset\baseline_book_black_24pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\DictionaryIcon.imageset\baseline_book_black_24pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\DictionaryIcon.imageset\baseline_book_black_24pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\FlashIcon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\FlashIcon.imageset\baseline_view_carousel_black_24pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\FlashIcon.imageset\baseline_view_carousel_black_24pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\FlashIcon.imageset\baseline_view_carousel_black_24pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\QuizIcon.imageset\baseline_check_circle_outline_black_24pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\QuizIcon.imageset\baseline_check_circle_outline_black_24pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\QuizIcon.imageset\baseline_check_circle_outline_black_24pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\QuizIcon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\InfoIcon.imageset\baseline_info_black_24pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\InfoIcon.imageset\baseline_info_black_24pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\InfoIcon.imageset\baseline_info_black_24pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\InfoIcon.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\152.png" />
@@ -247,16 +231,32 @@
     <ImageAsset Include="Assets.xcassets\potty_sign.imageset\potty_sign.png" />
     <ImageAsset Include="Assets.xcassets\water_sign.imageset\water_sign.png" />
     <ImageAsset Include="Assets.xcassets\where_sign.imageset\where_sign.png" />
-    <ImageAsset Include="Assets.xcassets\marketing_baby_signing_time.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\marketing_baby_signing_time.imageset\marketing_baby_signing_time.png" />
-    <ImageAsset Include="Assets.xcassets\marketing_christmas.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\marketing_christmas.imageset\marketing_christmas.png" />
-    <ImageAsset Include="Assets.xcassets\marketing_rachel_and_me.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\marketing_rachel_and_me.imageset\marketing_rachel_and_me.png" />
-    <ImageAsset Include="Assets.xcassets\marketing_signing_time.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\marketing_signing_time.imageset\marketing_signing_time.png" />
     <ImageAsset Include="Assets.xcassets\filler_bar_bottom.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\filler_bar_bottom.imageset\filler_bar_bottom.png" />
+    <ImageAsset Include="Assets.xcassets\icon_dictionary.imageset\baseline_book_black_24pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_dictionary.imageset\baseline_book_black_24pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_dictionary.imageset\baseline_book_black_24pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_dictionary.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_flash_cards.imageset\baseline_view_carousel_black_24pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_flash_cards.imageset\baseline_view_carousel_black_24pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_flash_cards.imageset\baseline_view_carousel_black_24pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_flash_cards.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_products.imageset\baseline_info_black_24pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_products.imageset\baseline_info_black_24pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_products.imageset\baseline_info_black_24pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_products.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_quiz.imageset\baseline_check_circle_outline_black_24pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_quiz.imageset\baseline_check_circle_outline_black_24pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_quiz.imageset\baseline_check_circle_outline_black_24pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_quiz.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo_signing_time.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo_signing_time.imageset\logo_signing_time.png" />
+    <ImageAsset Include="Assets.xcassets\logo_baby_signing_time.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo_baby_signing_time.imageset\logo_baby_signing_time.png" />
+    <ImageAsset Include="Assets.xcassets\logo_tree_schoolers.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo_tree_schoolers.imageset\logo_tree_schoolers.png" />
+    <ImageAsset Include="Assets.xcassets\logo_rachel_and_me.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo_rachel_and_me.imageset\logo_rachel_and_me.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -292,10 +292,6 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets.xcassets\DictionaryIcon.imageset\" />
-    <Folder Include="Assets.xcassets\FlashIcon.imageset\" />
-    <Folder Include="Assets.xcassets\QuizIcon.imageset\" />
-    <Folder Include="Assets.xcassets\InfoIcon.imageset\" />
     <Folder Include="Assets.xcassets\AppIcon.appiconset\" />
     <Folder Include="Assets.xcassets\splash_screen.imageset\" />
     <Folder Include="Assets.xcassets\again.imageset\" />
@@ -372,5 +368,14 @@
     <Folder Include="Assets.xcassets\marketing_rachel_and_me.imageset\" />
     <Folder Include="Assets.xcassets\marketing_signing_time.imageset\" />
     <Folder Include="Assets.xcassets\filler_bar_bottom.imageset\" />
+    <Folder Include="Assets.xcassets\icon_dictionary.imageset\" />
+    <Folder Include="Assets.xcassets\icon_flash_cards.imageset\" />
+    <Folder Include="Assets.xcassets\icon_products.imageset\" />
+    <Folder Include="Assets.xcassets\icon_quiz.imageset\" />
+    <Folder Include="Assets.xcassets\logo_signing_time.imageset\" />
+    <Folder Include="Assets.xcassets\logo_baby_signing_time.imageset\" />
+    <Folder Include="Assets.xcassets\logo_tree_schoolers.imageset\" />
+    <Folder Include="Assets.xcassets\logo_rachel_and_me.imageset\" />
+    <Folder Include="Assets.xcassets\logo_rachel_and_me.imageset\" />
   </ItemGroup>
 </Project>
