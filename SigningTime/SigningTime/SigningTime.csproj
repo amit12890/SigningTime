@@ -49,6 +49,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="Info.xaml" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="videos\baby.mp4" />
     <EmbeddedResource Include="videos\banana.mp4" />
     <EmbeddedResource Include="videos\bird.mp4" />

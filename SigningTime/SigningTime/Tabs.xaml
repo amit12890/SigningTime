@@ -28,14 +28,7 @@
     </ContentPage>
     
     <!-- Information -->
-    <ContentPage Title="Info" Icon="InfoIcon">
-        <ScrollView>
-            <StackLayout>
-                <BoxView BackgroundColor="Red" HeightRequest="600" WidthRequest="150" />
-                <Entry />
-            </StackLayout>
-        </ScrollView>
-    </ContentPage>
+    <local:Products Title="Info" Icon="InfoIcon" />
                  
 
 </TabbedPage>

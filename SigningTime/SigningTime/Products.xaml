@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SigningTime.Products"
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="#FFFDEE"
+             Padding="20,30,20,0" >
+             
+    <ScrollView>
+            <StackLayout
+                Spacing="10"
+                Padding="10,0,10,20">
+                
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Did you know research shows that signing:"
+                    FontSize="Large"
+                    TextColor="#F17882"
+                    XAlign="Start" >
+               </Label>
+                
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Allows babies to communicate long before they can speak"
+                    FontSize="Medium" />
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Reduces tantrums and frustration, and increases bonding between parent and child"
+                    FontSize="Medium" />
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Exposes baby to a real second language: American Sign Language (ASL)"
+                    FontSize="Medium" />
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Increases baby's vocabulary and may even increase IQ"
+                    FontSize="Medium" />
+
+                <Label HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Visit us at " />
+                            <Span Text="MySigningTime.com"
+                                  x:Name="hyperlink"
+                                  TextColor="Blue" >
+                            </Span>
+                            <Span Text=" today and use code " />
+                            <Span Text="14daytrial" 
+                                  FontAttributes="Bold"/>
+                            <Span Text=" to get a 14-day free trial and start learning today" />
+                    
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            
+            
+                <Grid x:Name="card" BackgroundColor="#FFFDEE" RowSpacing="0">
+                
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                
+                <Image Source="logo_baby_signing_time"
+                       Margin="10"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       MinimumWidthRequest="10"
+                       MinimumHeightRequest="10" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="BabySigningTimeLink"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="logo_signing_time"
+                       Margin="10"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       MinimumWidthRequest="10"
+                       MinimumHeightRequest="10" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="SigningTimeLink"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="logo_rachel_and_me"
+                       Margin="10"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       MinimumWidthRequest="10"
+                       MinimumHeightRequest="10" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="RachelAndMeLink"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="logo_tree_schoolers"
+                       Margin="10"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       MinimumWidthRequest="10"
+                       MinimumHeightRequest="10" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="TreeSchoolersLink"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                
+                </Grid>
+                
+
+            </StackLayout>
+        </ScrollView>
+    
+</ContentPage>
