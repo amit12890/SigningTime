@@ -17,27 +17,37 @@
                     FontSize="Large"
                     TextColor="#F17882"
                     XAlign="Start" >
+                    <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                                   iOS="FredokaOne-Regular"
+                                   Android="FredokaOne-Regular.ttf#Fredoka One" />
+                   </Label.FontFamily>
                </Label>
                 
                 <Label
                     HorizontalOptions="Center"
                     Text="Allows babies to communicate long before they can speak"
-                    FontSize="Medium" />
+                    FontSize="Medium" 
+                    TextColor="#222222"/>
                 <Label
                     HorizontalOptions="Center"
                     Text="Reduces tantrums and frustration, and increases bonding between parent and child"
-                    FontSize="Medium" />
+                    FontSize="Medium" 
+                    TextColor="#222222"/>
                 <Label
                     HorizontalOptions="Center"
                     Text="Exposes baby to a real second language: American Sign Language (ASL)"
-                    FontSize="Medium" />
+                    FontSize="Medium" 
+                    TextColor="#222222"/>
                 <Label
                     HorizontalOptions="Center"
                     Text="Increases baby's vocabulary and may even increase IQ"
-                    FontSize="Medium" />
+                    FontSize="Medium" 
+                    TextColor="#222222"/>
 
                 <Label HorizontalOptions="Start"
-                       VerticalOptions="CenterAndExpand" >
+                       VerticalOptions="CenterAndExpand" 
+                       TextColor="#222222" >
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Visit us at " />

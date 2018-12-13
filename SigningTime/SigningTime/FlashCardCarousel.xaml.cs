@@ -65,6 +65,16 @@ namespace SigningTime
         }
 
         /// <summary>
+        /// This will pause the video of a card if the user navigates away from 
+        /// the flash cards by selecting another tab while a video is playing.
+        /// </summary>
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            ((FlashCard)CurrentPage).HideVideoAfterSwipe();
+        }
+
+        /// <summary>
         /// Handles what happens when the carousel rotates to another page. 
         /// Override helps to remove any left over VideoPlayer objects from a 
         /// card if a user navigates away from it. If the user chooses to

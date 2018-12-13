@@ -78,6 +78,7 @@
             
             <Label x:Name="signDescription" 
                    Grid.Row="0"
+                   TextColor="#222222"
                    VerticalOptions="StartAndExpand"
                    HorizontalOptions="CenterAndExpand"
                Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."

@@ -50,6 +50,7 @@
 
   <ItemGroup>
     <EmbeddedResource Remove="Info.xaml" />
+    <EmbeddedResource Remove="MyPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="videos\baby.mp4" />
