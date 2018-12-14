@@ -26,7 +26,7 @@
                 <ViewCell>
                     <StackLayout Orientation="Horizontal" Padding="5">
                         
-                        <Image Source="{Binding Name, StringFormat='{0}_illustration'}"
+                        <Image Source="{Binding Name, StringFormat='{0}_list_illustration'}"
                                HeightRequest="50"
                                WidthRequest="50"
                                VerticalOptions="Center"
@@ -44,18 +44,6 @@
                                    Android="SignikaNegative-Regular.ttf#Fredoka One" />
                                </Label.FontFamily>
                         </Label>
-                        
-                        <BoxView BackgroundColor="red"
-                                 HeightRequest="50"
-                                 WidthRequest="50">
-                            <BoxView.Triggers>
-                                <DataTrigger TargetType="BoxView"
-                                             Binding="{Binding Learned}"
-                                             Value="True">
-                                    <Setter Property="BackgroundColor" Value="Green" />
-                                </DataTrigger>
-                            </BoxView.Triggers>
-                        </BoxView>
                         
                     </StackLayout>
                 </ViewCell>

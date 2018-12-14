@@ -20,7 +20,7 @@ namespace SigningTime
                 new Sign { Name = "cracker", Description = "Knock your fist on your elbow a few times." },
                 new Sign { Name = "dad", Description = "Put the thumb of your open hand on your forehead."},
                 new Sign { Name = "diaper", Description = "Tap your first two fingers against your thumbs twice, right where you fasten a diaper." },
-                new Sign { Name = "dog", Description = "Pat your let, or pat and snap like you're calling a dog." },
+                new Sign { Name = "dog", Description = "Pat your leg, or pat and snap like you're calling a dog." },
                 new Sign { Name = "drink", Description = "Pretend to drink from a cup." },
                 new Sign { Name = "eat", Description = "Tap your fingers to your mouth a few times, just like you're going to eat something. It's also the sign for food." },
                 new Sign { Name = "finished", Description = "Twist your hands back and forth a few times, like you are brushing everything away. It’s also the sign for all done." },
@@ -107,7 +107,6 @@ namespace SigningTime
                 ((FlashCard)Children[indexOfCurrentPage + 1]).HideVideoAfterSwipe();
             }
         }
-
 
     }
 }
