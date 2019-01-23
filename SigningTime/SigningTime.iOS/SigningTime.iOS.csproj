@@ -220,10 +220,6 @@
     <ImageAsset Include="Assets.xcassets\icon_products.imageset\baseline_info_black_24pt_2x.png" />
     <ImageAsset Include="Assets.xcassets\icon_products.imageset\baseline_info_black_24pt_3x.png" />
     <ImageAsset Include="Assets.xcassets\icon_products.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\icon_quiz.imageset\baseline_check_circle_outline_black_24pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\icon_quiz.imageset\baseline_check_circle_outline_black_24pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\icon_quiz.imageset\baseline_check_circle_outline_black_24pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\icon_quiz.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\logo_signing_time.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\logo_signing_time.imageset\logo_signing_time.png" />
     <ImageAsset Include="Assets.xcassets\logo_baby_signing_time.imageset\Contents.json" />

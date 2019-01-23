@@ -3,7 +3,7 @@
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               x:Class="SigningTime.SignDictionary"
               NavigationPage.HasNavigationBar="false"
-              BackgroundColor="#F17882" >
+              BackgroundColor="#f48d91" >
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
                     iOS="0,30,0,0"
@@ -11,24 +11,23 @@
     </ContentPage.Padding>
 
     <ListView ItemsSource="{Binding listOfSigns, Mode=TwoWay}"
-        SeparatorVisibility="Default"
+        SeparatorVisibility="None"
         SeparatorColor="#F17882"
         ItemTapped="GoToSignDemonstration"
         CachingStrategy="RecycleElement"
         HasUnevenRows="true"
-        BackgroundColor="#FFFDEE">
+        BackgroundColor="#f48d91">
         
         <!--Built in Cells-->
         <ListView.ItemTemplate>
             <DataTemplate>
                 
                 <!-- INDIVIDUAL CELL LAYOUT -->
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal" Padding="5">
-                        
+                <ViewCell>                  
+                    <StackLayout Orientation="Horizontal" Padding="0" BackgroundColor="#FFFDEE" Margin="10,0,10,10">
                         <Image Source="{Binding Name, StringFormat='{0}_list_illustration'}"
-                               HeightRequest="50"
-                               WidthRequest="50"
+                               HeightRequest="70"
+                               WidthRequest="70"
                                VerticalOptions="Center"
                                HorizontalOptions="Center" 
                                Margin="20,10,20,10"
@@ -44,7 +43,7 @@
                                    Android="SignikaNegative-Regular.ttf#Fredoka One" />
                                </Label.FontFamily>
                         </Label>
-                        
+
                     </StackLayout>
                 </ViewCell>
                 

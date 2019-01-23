@@ -21,12 +21,6 @@
         </x:Arguments>
     </NavigationPage>
     
-    
-    <!--Quiz -->
-    <ContentPage Title="Quiz" Icon="icon_quiz">
-         <Label Text="Here's where the quiz will go" HorizontalOptions="Center" VerticalOptions="Center" />
-    </ContentPage>
-    
     <!-- Information -->
     <local:Products Title="Information" Icon="icon_products" />
                  
