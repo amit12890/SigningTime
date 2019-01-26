@@ -7,18 +7,17 @@ namespace SigningTime
 {
     public class Sign : INotifyPropertyChanged
     {
-
-        bool isMastered;
+        bool flashCardUse;
 
         public string Name { get; set; }
         public string Description { get; set; }
-        public bool Learned
+        public bool UseAsFlashCard
         {
-            get { return isMastered; }
-            set 
-            { 
-                isMastered = value; 
-                onPropertyChanged(); 
+            get { return flashCardUse; }
+            set
+            {
+                flashCardUse = value;
+                onPropertyChanged();
             }
         }
 
@@ -28,5 +27,6 @@ namespace SigningTime
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
+
     }
 }

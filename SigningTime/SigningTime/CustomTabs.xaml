@@ -17,7 +17,7 @@
     <!-- Flashcards -->
     <NavigationPage Title="Flash Cards" Icon="icon_flash_cards">
         <x:Arguments>
-            <local:FlashCardCarousel />
+            <local:FlashCardLanding />
         </x:Arguments>
     </NavigationPage>
     
