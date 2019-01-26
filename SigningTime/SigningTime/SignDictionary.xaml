@@ -34,13 +34,13 @@
                                BackgroundColor="Color.Transparent"/>
                         <Label Text="{Binding Name}"
                                VerticalOptions="Center"
-                               Margin="0,0,0,0"
+                               Margin="10,0,0,0"
                                FontSize="Large"
                                TextColor="#F17982">
                                <Label.FontFamily> 
                                    <OnPlatform x:TypeArguments="x:String"
-                                   iOS="SignikaNegative-Regular"
-                                   Android="SignikaNegative-Regular.ttf#Fredoka One" />
+                                   iOS="SignikaNegative-SemiBold"
+                                   Android="SignikaNegative-SemiBold.ttf#Fredoka One" />
                                </Label.FontFamily>
                         </Label>
 

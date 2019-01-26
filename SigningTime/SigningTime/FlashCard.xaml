@@ -44,8 +44,8 @@
                VerticalOptions="Center" >
                <Label.FontFamily> 
                    <OnPlatform x:TypeArguments="x:String"
-                               iOS="FredokaOne-Regular"
-                               Android="FredokaOne-Regular.ttf#Fredoka One" />
+                   iOS="FredokaOne-Regular"
+                   Android="FredokaOne-Regular.ttf#Fredoka One" />
                </Label.FontFamily>
            </Label>
         

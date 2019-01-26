@@ -23,6 +23,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>FredokaOne-Regular.ttf</string>
+		<string>SignikaNegative-Regular.ttf</string>
+		<string>SignikaNegative-SemiBold.ttf</string>
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
