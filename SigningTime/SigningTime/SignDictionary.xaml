@@ -39,8 +39,8 @@
                                TextColor="#F17982">
                                <Label.FontFamily> 
                                    <OnPlatform x:TypeArguments="x:String"
-                                   iOS="SignikaNegative-SemiBold"
-                                   Android="SignikaNegative-SemiBold.ttf#Fredoka One" />
+                                   iOS="FredokaOne-Regular"
+                                   Android="FredokaOne-Regular.ttf#Fredoka One" />
                                </Label.FontFamily>
                         </Label>
 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SigningTime.NotEnoughFlashCards"
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="#FFFDEE">
+             
+    <StackLayout VerticalOptions="CenterAndExpand"
+                 HorizontalOptions="CenterAndExpand"
+                 Margin="40,20,40,40">
+        
+        <Label Text="Please select more cards!" 
+               TextColor="#e04652" 
+               VerticalTextAlignment="Center"
+               HorizontalOptions="CenterAndExpand"
+               XAlign="Center"
+               FontSize="Large"
+               Margin="0,0,0,15">
+            <Label.FontFamily> 
+               <OnPlatform x:TypeArguments="x:String"
+               iOS="FredokaOne-Regular"
+               Android="FredokaOne-Regular.ttf#Fredoka One" />
+            </Label.FontFamily>
+        </Label>
+        
+        <Label Text="It looks like you need more signs to have an effective flash card deck. Make sure you have at least 4 selected. Thanks!"
+               TextColor="#333333"
+               VerticalTextAlignment="End"
+               HorizontalOptions="CenterAndExpand" 
+               XAlign="Center"
+               FontSize="Medium"
+               Margin = "0,0,0,25">
+            <Label.FontFamily> 
+               <OnPlatform x:TypeArguments="x:String"
+               iOS="SignikaNegative-SemiBold"
+               Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
+            </Label.FontFamily>
+        </Label>
+        
+        <Button Text="OK"
+                TextColor="#FFFDEE"
+                FontSize="Large"
+                BackgroundColor="#85c63c"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Padding="40,10,40,10"
+                BorderColor="#4c741e"
+                Clicked="Handle_Clicked" >
+            <Button.FontFamily> 
+               <OnPlatform x:TypeArguments="x:String"
+               iOS="FredokaOne-Regular"
+               Android="FredokaOne-Regular.ttf#Fredoka One" />
+            </Button.FontFamily>
+        </Button>
+    </StackLayout>
+    
+    
+</ContentPage>
