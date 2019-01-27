@@ -23,28 +23,30 @@
             <DataTemplate>
                 
                 <!-- INDIVIDUAL CELL LAYOUT -->
-                <ViewCell>                  
-                    <StackLayout Orientation="Horizontal" Padding="0" BackgroundColor="#FFFDEE" Margin="10,0,10,10">
+                <ViewCell>
+                    <Frame BackgroundColor="#FFFDEE" Margin="10,0,10,10" CornerRadius="5" HasShadow="false" BorderColor="#f17982" Padding="0">
+                    <StackLayout Orientation="Horizontal" Padding="0" >
                         <Image Source="{Binding Name, StringFormat='{0}_list_illustration'}"
-                               HeightRequest="70"
-                               WidthRequest="70"
-                               VerticalOptions="Center"
-                               HorizontalOptions="Center" 
-                               Margin="20,10,20,10"
-                               BackgroundColor="Color.Transparent"/>
-                        <Label Text="{Binding Name}"
-                               VerticalOptions="Center"
-                               Margin="10,0,0,0"
-                               FontSize="Large"
-                               TextColor="#F17982">
+                                   HeightRequest="70"
+                                   WidthRequest="70"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center" 
+                                   Margin="20,15,20,15"
+                                   BackgroundColor="Color.Transparent"/>
+                            <Label Text="{Binding Name}"
+                                   VerticalOptions="Center"
+                                   Margin="10,0,0,0"
+                                   FontSize="Large"
+                                   TextColor="#F17982">
                                <Label.FontFamily> 
-                                   <OnPlatform x:TypeArguments="x:String"
-                                   iOS="FredokaOne-Regular"
-                                   Android="FredokaOne-Regular.ttf#Fredoka One" />
-                               </Label.FontFamily>
-                        </Label>
+                                       <OnPlatform x:TypeArguments="x:String"
+                                       iOS="FredokaOne-Regular"
+                                      Android="FredokaOne-Regular.ttf#Fredoka One" />
+                                  </Label.FontFamily>
+                           </Label>
 
-                    </StackLayout>
+                        </StackLayout>
+                    </Frame>
                 </ViewCell>
                 
             </DataTemplate>

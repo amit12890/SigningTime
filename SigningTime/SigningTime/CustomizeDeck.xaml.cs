@@ -67,7 +67,7 @@ namespace SigningTime
 
                     Frame frame = new Frame {
                         BackgroundColor = Color.FromHex("#f48d91"),
-                        BorderColor = Color.FromHex("f17982"),
+                        BorderColor = Color.FromHex("#f17982"),
                         Padding = 0,
                         HasShadow = false,
                         CornerRadius = 5,

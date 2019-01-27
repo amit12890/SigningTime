@@ -16,7 +16,7 @@
                     Text="Did you know research shows that signing:"
                     FontSize="Large"
                     TextColor="#F17882"
-                    XAlign="Start" >
+                    XAlign="Center" >
                     <Label.FontFamily> 
                        <OnPlatform x:TypeArguments="x:String"
                                    iOS="FredokaOne-Regular"
@@ -26,24 +26,48 @@
                 
                 <Label
                     HorizontalOptions="Center"
-                    Text="Allows babies to communicate long before they can speak"
+                    Text="&#x2022; Allows babies to communicate long before they can speak."
                     FontSize="Medium" 
-                    TextColor="#222222"/>
+                    TextColor="#333333">
+                    <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                        iOS="SignikaNegative-SemiBold"
+                        Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
+                    </Label.FontFamily>                
+                </Label>
                 <Label
                     HorizontalOptions="Center"
-                    Text="Reduces tantrums and frustration, and increases bonding between parent and child"
+                    Text="&#x2022; Reduces tantrums and frustration, and increases bonding between parent and child."
                     FontSize="Medium" 
-                    TextColor="#222222"/>
+                    TextColor="#333333">
+                    <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                        iOS="SignikaNegative-SemiBold"
+                        Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
+                    </Label.FontFamily> 
+                </Label>
                 <Label
                     HorizontalOptions="Center"
-                    Text="Exposes baby to a real second language: American Sign Language (ASL)"
+                    Text="&#x2022; Exposes baby to a real second language: American Sign Language (ASL)."
                     FontSize="Medium" 
-                    TextColor="#222222"/>
+                    TextColor="#333333">
+                    <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                        iOS="SignikaNegative-SemiBold"
+                        Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
+                    </Label.FontFamily> 
+                </Label>
                 <Label
                     HorizontalOptions="Center"
-                    Text="Increases baby's vocabulary and may even increase IQ"
+                    Text="&#x2022; Increases baby's vocabulary and may even increase IQ."
                     FontSize="Medium" 
-                    TextColor="#222222"/>
+                    TextColor="#333333">
+                    <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                        iOS="SignikaNegative-SemiBold"
+                        Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
+                    </Label.FontFamily> 
+                </Label>
 
                 <Label HorizontalOptions="Start"
                        VerticalOptions="CenterAndExpand" 
@@ -53,7 +77,7 @@
                             <Span Text="Visit us at " />
                             <Span Text="MySigningTime.com"
                                   x:Name="hyperlink"
-                                  TextColor="Blue" >
+                                  TextColor="#1594d5" >
                                 <Span.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="MySigningTimeLink"
                                                           NumberOfTapsRequired="1" />
@@ -62,12 +86,23 @@
                             
                             </Span>
                             <Span Text=" today and use code " />
-                            <Span Text="14daytrial" 
-                                  FontAttributes="Bold"/>
+      
+                            <Span Text="14daytrial">
+                                 <Span.FontFamily> 
+                                 <OnPlatform x:TypeArguments="x:String"
+                                        iOS="SignikaNegative-SemiBold"
+                                        Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
+                                 </Span.FontFamily> 
+                            </Span>
                             <Span Text=" to get a 14-day free trial and start learning today" />
                     
                         </FormattedString>
                     </Label.FormattedText>
+                                    <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                        iOS="SignikaNegative-Regular"
+                        Android="SignikaNegative-Regular.ttf#SignikaNegative-Regular" />
+                    </Label.FontFamily> 
                 </Label>
             
             
