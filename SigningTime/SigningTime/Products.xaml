@@ -6,14 +6,15 @@
              BackgroundColor="#FFFDEE"
              Padding="20,30,20,0" >
              
-    <ScrollView>
+    <ScrollView VerticalScrollBarVisibility="Never">
             <StackLayout
                 Spacing="10"
                 Padding="10,0,10,20">
-                
-                <Label
+            
+            
+            <Label
                     HorizontalOptions="CenterAndExpand"
-                    Text="Did you know research shows that signing:"
+                    Text="Visit us online!"
                     FontSize="Large"
                     TextColor="#F17882"
                     XAlign="Center" >
@@ -23,52 +24,7 @@
                                    Android="FredokaOne-Regular.ttf#Fredoka One" />
                    </Label.FontFamily>
                </Label>
-                
-                <Label
-                    HorizontalOptions="Center"
-                    Text="&#x2022; Allows babies to communicate long before they can speak."
-                    FontSize="Medium" 
-                    TextColor="#333333">
-                    <Label.FontFamily> 
-                       <OnPlatform x:TypeArguments="x:String"
-                        iOS="SignikaNegative-SemiBold"
-                        Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
-                    </Label.FontFamily>                
-                </Label>
-                <Label
-                    HorizontalOptions="Center"
-                    Text="&#x2022; Reduces tantrums and frustration, and increases bonding between parent and child."
-                    FontSize="Medium" 
-                    TextColor="#333333">
-                    <Label.FontFamily> 
-                       <OnPlatform x:TypeArguments="x:String"
-                        iOS="SignikaNegative-SemiBold"
-                        Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
-                    </Label.FontFamily> 
-                </Label>
-                <Label
-                    HorizontalOptions="Center"
-                    Text="&#x2022; Exposes baby to a real second language: American Sign Language (ASL)."
-                    FontSize="Medium" 
-                    TextColor="#333333">
-                    <Label.FontFamily> 
-                       <OnPlatform x:TypeArguments="x:String"
-                        iOS="SignikaNegative-SemiBold"
-                        Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
-                    </Label.FontFamily> 
-                </Label>
-                <Label
-                    HorizontalOptions="Center"
-                    Text="&#x2022; Increases baby's vocabulary and may even increase IQ."
-                    FontSize="Medium" 
-                    TextColor="#333333">
-                    <Label.FontFamily> 
-                       <OnPlatform x:TypeArguments="x:String"
-                        iOS="SignikaNegative-SemiBold"
-                        Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
-                    </Label.FontFamily> 
-                </Label>
-
+            
                 <Label HorizontalOptions="Start"
                        VerticalOptions="CenterAndExpand" 
                        TextColor="#222222" >
@@ -168,7 +124,77 @@
                 
                 </Grid>
                 
-
+                
+   
+                <BoxView BackgroundColor="#f48d91" 
+                         HeightRequest="1"
+                         Margin="0,20,0,20"/>
+                
+            
+                
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Did you know research shows that signing:"
+                    FontSize="Large"
+                    TextColor="#F17882"
+                    XAlign="Center" >
+                    <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                                   iOS="FredokaOne-Regular"
+                                   Android="FredokaOne-Regular.ttf#Fredoka One" />
+                   </Label.FontFamily>
+               </Label>
+                
+                <Label
+                    HorizontalOptions="Center"
+                    Text="&#x2022; Allows babies to communicate long before they can speak."
+                    FontSize="Medium" 
+                    TextColor="#333333"
+                    Margin="0,10,0,0">
+                    <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                        iOS="SignikaNegative-SemiBold"
+                        Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
+                    </Label.FontFamily>                
+                </Label>
+                <Label
+                    HorizontalOptions="Center"
+                    Text="&#x2022; Reduces tantrums and frustration, and increases bonding between parent and child."
+                    FontSize="Medium" 
+                    TextColor="#333333"
+                Margin="0,10,0,0">
+                    <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                        iOS="SignikaNegative-SemiBold"
+                        Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
+                    </Label.FontFamily> 
+                </Label>
+                <Label
+                    HorizontalOptions="Center"
+                    Text="&#x2022; Exposes baby to a real second language: American Sign Language (ASL)."
+                    FontSize="Medium" 
+                    TextColor="#333333"
+                    Margin="0,10,0,0">
+                    <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                        iOS="SignikaNegative-SemiBold"
+                        Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
+                    </Label.FontFamily> 
+                </Label>
+                <Label
+                    HorizontalOptions="Center"
+                    Text="&#x2022; Increases baby's vocabulary and may even increase IQ."
+                    FontSize="Medium" 
+                    TextColor="#333333"
+                    Margin="0,10,0,10">
+                    <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                        iOS="SignikaNegative-SemiBold"
+                        Android="SignikaNegative-SemiBold.ttf#SignikaNegative-SemiBold" />
+                    </Label.FontFamily> 
+                </Label>
+            
+                
             </StackLayout>
         </ScrollView>
     
