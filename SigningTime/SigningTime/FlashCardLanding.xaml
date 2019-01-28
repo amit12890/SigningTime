@@ -32,22 +32,64 @@
         
 <!-- GO TO ALL SIGNS -->
 
-            <Label Grid.Row="1" Margin="20,0,20,30" BackgroundColor="Red"
-                   Text="All Signs">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="StartFullDeck" />
-                </Label.GestureRecognizers>
-            </Label>
+        <Frame Grid.Row="1"
+               Padding="0,0,0,0"
+               Margin="20,0,20,20"
+               IsClippedToBounds="true"
+               CornerRadius="10">
+            <Grid>
+                <Image Source="flash_card_default" Aspect="AspectFill" />
+                <Frame BackgroundColor="Transparent" Padding="0">
+                <Label Text="All Cards"
+                   FontSize="40"
+                   Margin="0,0,0,20"
+                   TextColor="#EEEEEE" 
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center">
+                   <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                                   iOS="FredokaOne-Regular"
+                                   Android="FredokaOne-Regular.ttf#Fredoka One" />
+                   </Label.FontFamily>
+                </Label> 
+                </Frame>
+            </Grid>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="StartFullDeck" />
+            </Frame.GestureRecognizers>
+        </Frame>
+        
+
                 
         
 <!-- CREATE A CUSTOM DECK -->
-         
-           <Label Grid.Row="2" Margin="20,0,20,30" BackgroundColor="Purple"
-                   Text="Create Custom Deck">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="CustomizeDeck" />
-                </Label.GestureRecognizers>
-            </Label>
+        
+        <Frame Grid.Row="2"
+               Padding="0,0,0,0"
+               Margin="20,0,20,20"
+               IsClippedToBounds="true"
+               CornerRadius="10">
+            <Grid>
+                <Image Source="flash_card_custom" Aspect="AspectFill" />
+                <Frame BackgroundColor="Transparent" Padding="0">
+                <Label Text="Select Cards"
+                   FontSize="40"
+                   Margin="0,0,0,20"
+                   TextColor="#EEEEEE" 
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center">
+                   <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                                   iOS="FredokaOne-Regular"
+                                   Android="FredokaOne-Regular.ttf#Fredoka One" />
+                   </Label.FontFamily>
+                </Label> 
+                </Frame>
+            </Grid>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CustomizeDeck" />
+            </Frame.GestureRecognizers>
+        </Frame>
     
     </Grid>
 </ContentPage>

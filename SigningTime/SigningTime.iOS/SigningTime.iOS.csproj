@@ -403,6 +403,14 @@
     <ImageAsset Include="Assets.xcassets\potty_sign.imageset\potty_sign3x.png" />
     <ImageAsset Include="Assets.xcassets\water_sign.imageset\water_sign3x.png" />
     <ImageAsset Include="Assets.xcassets\where_sign.imageset\where_sign3x.png" />
+    <ImageAsset Include="Assets.xcassets\flash_card_custom.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\flash_card_custom.imageset\playvideoArtboard 2.png" />
+    <ImageAsset Include="Assets.xcassets\flash_card_default.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\flash_card_default.imageset\playvideoArtboard 1.png" />
+    <ImageAsset Include="Assets.xcassets\flash_card_custom.imageset\playvideoArtboard 2x.png" />
+    <ImageAsset Include="Assets.xcassets\flash_card_default.imageset\playvideoArtboard 2x.png" />
+    <ImageAsset Include="Assets.xcassets\flash_card_custom.imageset\playvideoArtboard 1x.png" />
+    <ImageAsset Include="Assets.xcassets\flash_card_default.imageset\playvideoArtboard 1x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -548,5 +556,7 @@
     <Folder Include="Assets.xcassets\water_list_illustration.imageset\" />
     <Folder Include="Assets.xcassets\where_list_illustration.imageset\" />
     <Folder Include="Assets.xcassets\mom_list_illustration.imageset\" />
+    <Folder Include="Assets.xcassets\flash_card_custom.imageset\" />
+    <Folder Include="Assets.xcassets\flash_card_default.imageset\" />
   </ItemGroup>
 </Project>

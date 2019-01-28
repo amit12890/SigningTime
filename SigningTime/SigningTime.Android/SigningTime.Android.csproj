@@ -414,6 +414,14 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\potty_illustration.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\water_illustration.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\where_illustration.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\flash_card_default.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\flash_card_custom.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\flash_card_default.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\flash_card_custom.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\flash_card_default.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\flash_card_custom.png" />
+    <AndroidResource Include="Resources\drawable\flash_card_default.png" />
+    <AndroidResource Include="Resources\drawable\flash_card_custom.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
