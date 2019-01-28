@@ -42,6 +42,17 @@ namespace SigningTime
             // Loads and parses the associated XAML
             InitializeComponent();
 
+            // All the cards that are set to not appear in the custom flash card deck are
+            // stored in this dictionary. This happens in the CustomizeDeck class. We need
+            // to get all of these out and restore their value each time the app starts
+            for(int i = 0; i < allSigns.Count; i++)
+            {
+                if (Properties.ContainsKey(allSigns[i].Name))
+                {
+                    allSigns[i].UseAsFlashCard = false;
+                }
+            }
+
             // MainPage is a property of the base Application class. It's used 
             // to set the starting (root) page of our application.
             //

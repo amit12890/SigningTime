@@ -16,14 +16,14 @@ namespace SigningTime
             InitializeComponent();
 
             // Adds all the signs to the grid
-            for (int row = 0; row < SignList.allSigns.Count ; row+=3)
+            for (int row = 0; row < App.allSigns.Count ; row+=3)
             {
 
                 // Adds a full set of signs to the current row
                 for (int column = 0; column < 3; column++)
                 {
                     // Stop filling out this row if we're out of signs
-                    if (row + column+1 > SignList.allSigns.Count)
+                    if (row + column+1 > App.allSigns.Count)
                     {
                         break;
                     }
@@ -67,14 +67,20 @@ namespace SigningTime
                             // Find the sign
                             if (App.allSigns[i].Name.Equals(nameOfSign))
                             {
+                                String signName = App.allSigns[i].Name;
+
                                 // Determine if the card is set to be used or not
                                 if (App.allSigns[i].UseAsFlashCard)
                                 {
+                                    // Set card to NOT appear, and add to App Properties for long-time storage
                                     App.allSigns[i].UseAsFlashCard = false;
+                                    Application.Current.Properties[signName] = false;
                                 }
                                 else
                                 {
+                                    // Set card TO appear, and remove from App Properties for long-time storage
                                     App.allSigns[i].UseAsFlashCard = true;
+                                    Application.Current.Properties.Remove(signName);
                                 }
                                 // End the for loop
                                 break;
