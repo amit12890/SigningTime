@@ -95,5 +95,6 @@
     <Compile Remove="TabRenderer.cs" />
     <Compile Remove="MyPage.xaml.cs" />
     <Compile Remove="Info.xaml.cs" />
+    <Compile Remove="SignList.cs" />
   </ItemGroup>
 </Project>
