@@ -2,10 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="SigningTime.FlashCardLanding"
-             NavigationPage.HasNavigationBar="false">
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="#FFFDEE"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true" >
 
-     <Grid BackgroundColor="#FFFDEE"
-          RowSpacing="0">
+     <Grid RowSpacing="0">
  
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -13,9 +15,9 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         
-<!-- MESSAGE ABOUT SELECTING DECK -->
+<!-- TITLE -->
             
-            <Label Grid.Row="0" Margin="30,30,30,30"
+            <Label Grid.Row="0" Margin="30,20,30,30"
                    Text="Deck selection."
                    XAlign="Center"
                    FontSize="Large"
@@ -30,7 +32,7 @@
         
 <!-- GO TO ALL SIGNS -->
 
-            <Label Grid.Row="1" Margin="30, 0, 30, 30" BackgroundColor="Red"
+            <Label Grid.Row="1" Margin="20,0,20,30" BackgroundColor="Red"
                    Text="All Signs">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="StartFullDeck" />
@@ -40,7 +42,7 @@
         
 <!-- CREATE A CUSTOM DECK -->
          
-           <Label Grid.Row="2" Margin="30, 0, 30, 30" BackgroundColor="Purple"
+           <Label Grid.Row="2" Margin="20,0,20,30" BackgroundColor="Purple"
                    Text="Create Custom Deck">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="CustomizeDeck" />

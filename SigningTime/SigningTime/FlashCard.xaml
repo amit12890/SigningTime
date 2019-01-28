@@ -5,11 +5,13 @@
              x:Class="SigningTime.FlashCard"
              NavigationPage.HasNavigationBar="false"
              BackgroundColor="#333333"
-             Padding="20, 30, 20, 20" >
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true" >
         
 <!-- GRID REPRESENTING THE CARD -->
     <Grid x:Name="card" BackgroundColor="#FFFDEE"
-          RowSpacing="0">
+          RowSpacing="0"
+          Margin="20, 40, 20, 30" >
         
         <Grid.RowDefinitions>
             <RowDefinition Height="AUTO" />

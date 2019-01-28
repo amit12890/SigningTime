@@ -2,6 +2,9 @@
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms" 
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
               x:Class="SigningTime.FlashCardCarousel"
-              NavigationPage.HasNavigationBar="false">
+              NavigationPage.HasNavigationBar="false"
+              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+              ios:Page.UseSafeArea="true" 
+              BackgroundColor="#333333">
         
 </CarouselPage>

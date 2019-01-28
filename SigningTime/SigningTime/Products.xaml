@@ -4,12 +4,13 @@
              x:Class="SigningTime.Products"
              NavigationPage.HasNavigationBar="false"
              BackgroundColor="#FFFDEE"
-             Padding="20,30,20,0" >
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true" >
              
     <ScrollView VerticalScrollBarVisibility="Never">
             <StackLayout
                 Spacing="10"
-                Padding="10,0,10,20">
+                Padding="20,0,20,20">
             
                
                 <BoxView BackgroundColor="#f48d91" 

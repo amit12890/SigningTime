@@ -2,21 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="SigningTime.CustomizeDeck"
-             NavigationPage.HasNavigationBar="false">
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="#FFFDEE"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true" >
              
              
-    <StackLayout BackgroundColor="#FFFDEE">
+    <StackLayout >
         
-        <StackLayout Margin="30,30,30,20"
+        <StackLayout Margin="20,10,20,10"
                      Orientation="Horizontal"
                      VerticalOptions="StartAndExpand">
-            <Button Text="BACK" Clicked="GoBack" />
-            <Label Text="Select the cards you'd like to include in your deck." />
-            <Button Text="GO" Clicked="StartCards" />
+            <Button Text="BACK" Clicked="GoBack" HorizontalOptions="StartAndExpand"/>
+            <Label Text="Select Cards."
+                   XAlign="Center"
+                   VerticalOptions="Center"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="Large"
+                   TextColor="#F17882">
+                <Label.FontFamily> 
+                       <OnPlatform x:TypeArguments="x:String"
+                                   iOS="FredokaOne-Regular"
+                                   Android="FredokaOne-Regular.ttf#Fredoka One" />
+                </Label.FontFamily>
+            </Label>    
+            <Button Text="GO" Clicked="StartCards" HorizontalOptions="EndAndExpand" />
         </StackLayout>
         
         
-        <ScrollView Margin="20, 0, 20, 0"
+        <ScrollView Margin="20,0,20,10"
                     VerticalScrollBarVisibility="Never">
             
             <Grid x:Name="gridOfSigns"

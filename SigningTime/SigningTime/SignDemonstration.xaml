@@ -5,9 +5,9 @@
               x:Class="SigningTime.SignDemonstration"
               NavigationPage.HasNavigationBar="false"
               BackgroundColor="#F17982">
+    
     <ContentPage.Content>
-        
-        
+
         <!-- Inner grid is what makes up the actual card itself -->
         <Grid BackgroundColor="#FFFDEE" RowSpacing="0">
             
@@ -25,7 +25,7 @@
                 <Image Source="filler_bar_bottom"
                        VerticalOptions="Start"
                        Aspect="Fill"
-                       HeightRequest="20"/> 
+                       HeightRequest="25"/> 
                 
                 <Image Source="card_bottom" 
                        RotationX="180"
@@ -62,7 +62,7 @@
                             Type=RelativeToParent,
                             Property=Height,
                             Factor=0.0,
-                            Constant=35}">
+                            Constant=30}">
                        <Image.GestureRecognizers>
                             <TapGestureRecognizer
                             Tapped="BackButton"
@@ -83,7 +83,7 @@
                 BackgroundColor="#Color.Transparent"/>
             
            <StackLayout
-                VerticalOptions="FillAndExpand"
+                VerticalOptions="EndAndExpand"
                 HorizontalOptions="Fill"
                 Grid.Row="2">
                 
