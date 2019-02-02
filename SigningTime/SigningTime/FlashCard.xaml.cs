@@ -35,16 +35,34 @@ namespace SigningTime
             // Registers what to do with the video player based on video state
             videoPlayer.Completed += (object sender, VideoPlayerEventArgs e) => {
                 HideVideo();
-                videoButton.Source = "video_play_icon";
+                videoButton.Source = "icon_play";
             };
             videoPlayer.Playing += (object sender, VideoPlayerEventArgs e) =>
             {
-                videoButton.Source = "video_pause_icon";
+                videoButton.Source = "icon_pause";
             };
             videoPlayer.Paused += (object sender, VideoPlayerEventArgs e) =>
             {
-                videoButton.Source = "video_play_icon";
+                videoButton.Source = "icon_play";
             };
+        }
+
+       /// <summary>
+       /// Returns the user back to the Flash Card Landing Page
+       /// </summary>
+       /// <param name="sender">Sender.</param>
+       /// <param name="e">E.</param>
+       private void BackButton(object sender, System.EventArgs e)
+        {
+            // Pause the video if it's playing
+            if (videoPlayer.State.Equals(PlayerState.Playing))
+            {
+                videoPlayer.Pause();
+            }
+
+            // Get the FlashCardCarousel that's managing the flash cards
+            FlashCardCarousel carousel = (FlashCardCarousel) this.Parent;
+            carousel.BackButton();
         }
 
         /// <summary>

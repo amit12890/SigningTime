@@ -411,6 +411,22 @@
     <ImageAsset Include="Assets.xcassets\flash_card_default.imageset\playvideoArtboard 2x.png" />
     <ImageAsset Include="Assets.xcassets\flash_card_custom.imageset\playvideoArtboard 1x.png" />
     <ImageAsset Include="Assets.xcassets\flash_card_default.imageset\playvideoArtboard 1x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_pause.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_play.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_pause.imageset\pause x1.png" />
+    <ImageAsset Include="Assets.xcassets\icon_pause.imageset\pause x2.png" />
+    <ImageAsset Include="Assets.xcassets\icon_pause.imageset\pause x3.png" />
+    <ImageAsset Include="Assets.xcassets\icon_play.imageset\play x3.png" />
+    <ImageAsset Include="Assets.xcassets\icon_play.imageset\play x2.png" />
+    <ImageAsset Include="Assets.xcassets\icon_play.imageset\play x1.png" />
+    <ImageAsset Include="Assets.xcassets\icon_back.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_back.imageset\icon_back x3.png" />
+    <ImageAsset Include="Assets.xcassets\icon_back.imageset\icon_back x2.png" />
+    <ImageAsset Include="Assets.xcassets\icon_back.imageset\icon_back x1.png" />
+    <ImageAsset Include="Assets.xcassets\icon_back_blue.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_back_blue.imageset\icon_back_blue 1x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_back_blue.imageset\icon_back_blue 2x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_back_blue.imageset\icon_back_blue 3x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -558,5 +574,9 @@
     <Folder Include="Assets.xcassets\mom_list_illustration.imageset\" />
     <Folder Include="Assets.xcassets\flash_card_custom.imageset\" />
     <Folder Include="Assets.xcassets\flash_card_default.imageset\" />
+    <Folder Include="Assets.xcassets\icon_pause.imageset\" />
+    <Folder Include="Assets.xcassets\icon_play.imageset\" />
+    <Folder Include="Assets.xcassets\icon_back.imageset\" />
+    <Folder Include="Assets.xcassets\icon_back_blue.imageset\" />
   </ItemGroup>
 </Project>

@@ -38,21 +38,25 @@
                    FontSize="35"
                    TextColor="#EEEEEE"
                    HorizontalOptions="Center" 
-                   VerticalOptions="Center"
-                   Margin="0,30,0,0">
+                   VerticalOptions="Center" >
                    <Label.FontFamily> 
                        <OnPlatform x:TypeArguments="x:String"
                                    iOS="FredokaOne-Regular"
                                    Android="FredokaOne-Regular.ttf#Fredoka One" />
                    </Label.FontFamily>
+                    <Label.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <OnPlatform.Android>0,20,0,0</OnPlatform.Android>
+                        <OnPlatform.iOS>0,30,0,0</OnPlatform.iOS>
+                    </OnPlatform>
+                    </Label.Margin>
               </Label>
             
             <RelativeLayout Grid.Row="0"
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="CenterAndExpand">
-                <Image Source="back_arrow"
-                       WidthRequest="30"
-                       HeightRequest="20"
+                <Image Source="icon_back"
+                       WidthRequest="40"
                        RelativeLayout.XConstraint="{ConstraintExpression
                             Type=RelativeToParent,
                             Property=Width,
@@ -92,12 +96,12 @@
            </StackLayout>
             
             
-           <Image Source="video_play_icon"
+           <Image Source="icon_play"
                    Grid.Row="2"
                    VerticalOptions="End"
-                   Scale=".5"
+                   Scale=".7"
                    x:Name="videoButton"
-                   TranslationY="5" >
+                   TranslationY="-1" >
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer
                         Tapped="ToggleVideoPlayback"

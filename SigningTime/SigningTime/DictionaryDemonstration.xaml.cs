@@ -35,16 +35,16 @@ namespace SigningTime
 
             // Set up pause/play icons to switch based on player state
             videoPlayer.Paused += (object sender, VideoPlayerEventArgs e) => {
-                videoButton.Source = "video_play_icon";
+                videoButton.Source = "icon_play";
             };
             videoPlayer.Playing
              += (object sender, VideoPlayerEventArgs e) => {
-                videoButton.Source = "video_pause_icon";
+                videoButton.Source = "icon_pause";
             };
 
             // Set up the play icon to reset when video completes
             videoPlayer.Completed += (object sender, VideoPlayerEventArgs e) => {
-                videoButton.Source = "video_play_icon";
+                videoButton.Source = "icon_play";
             };
 
         }

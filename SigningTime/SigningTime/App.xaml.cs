@@ -27,7 +27,7 @@ namespace SigningTime
             new Sign { Name = "grandma", UseAsFlashCard = true, Description = "Put the thumb of your open hand on your chin, just like \"mom,\" but bounce your hand forward"},
             new Sign { Name = "grandpa", UseAsFlashCard = true, Description = "Put the thumb of your open hand on your forehead, just like \"dad,\" but bounce your hand forward"},
             new Sign { Name = "horse", UseAsFlashCard = true, Description = "Touch your thumb to the side of your head and wave your first two fingers forward a few times, like a horse’s ear." },
-            new Sign { Name = "hurt", UseAsFlashCard = true, Description = "Push your pointer fingers together over the top of your owie." }, // LONGER THAN 15sec
+            //new Sign { Name = "hurt", UseAsFlashCard = true, Description = "Push your pointer fingers together over the top of your owie." }, // LONGER THAN 15sec
             new Sign { Name = "juice", UseAsFlashCard = true, Description = "Use your pinky finger to draw a \"J\" for Juice." },
             new Sign { Name = "milk", UseAsFlashCard = true, Description = "Squeeze and relax your fist a few times, like you're milking a cow." },
             new Sign { Name = "mom", UseAsFlashCard = true, Description = "Put the thumb of your open hand on your chin." },

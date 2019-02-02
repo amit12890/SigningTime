@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using Xamarin.Forms;
 
 namespace SigningTime
 {
     public partial class FlashCardCarousel : CarouselPage
     {
+
+        private bool backButtonPressed = false;
+
         public FlashCardCarousel(List<Sign> listOfSigns)
         {
 
@@ -41,7 +43,18 @@ namespace SigningTime
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            ((FlashCard)CurrentPage).HideVideoAfterSwipe();
+            FlashCard currentPage = (FlashCard) CurrentPage;
+
+            // VideoPlayer was having a problem with this function if the back button
+            // had been pressed and we were popping the navigation stack. I believe
+            // The underlying problem is when the video player is trying to assign
+            // itself a new source. So skipping this function call when popping the
+            // navigation stack avoids the issue.
+
+            if (!backButtonPressed)
+            {
+                currentPage.HideVideoAfterSwipe();
+            }
         }
 
         /// <summary>
@@ -77,6 +90,16 @@ namespace SigningTime
                 ((FlashCard)Children[indexOfCurrentPage - 1]).HideVideoAfterSwipe();
                 ((FlashCard)Children[indexOfCurrentPage + 1]).HideVideoAfterSwipe();
             }
+        }
+
+        /// <summary>
+        /// Returns the user back to the Flash Card Landing Page. This will
+        /// be called from one of the FlashCard's back button.
+        /// </summary>
+        public void BackButton()
+        {
+            backButtonPressed = true;
+            Navigation.PopAsync();
         }
 
     }

@@ -37,6 +37,30 @@
                    VerticalOptions="Start"/> 
         </StackLayout>
         
+        <RelativeLayout Grid.Row="0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="StartAndExpand">
+                <Image Source="icon_back"
+                       WidthRequest="30"
+                       RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Width,
+                            Factor=0.0,
+                            Constant=17}"
+                       RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.0,
+                            Constant=15}">
+                       <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                            Tapped="BackButton"
+                            NumberOfTapsRequired="1" />
+                       </Image.GestureRecognizers>
+                    </Image>
+                    
+            </RelativeLayout>
+        
         <Label x:Name="signName"
                Grid.Row="0"
                Text="sign name"
@@ -121,13 +145,13 @@
               Grid.Row="2"
               VerticalOptions="End"/>
                
-        <Image Source="video_play_icon"
+        <Image Source="icon_play"
                IsVisible="false"
                Grid.Row="2"
                VerticalOptions="End"
-               Scale=".5"
+               Scale=".7"
                x:Name="videoButton"
-               TranslationY="4" >
+               TranslationY="-1" >
             <Image.GestureRecognizers>
                 <TapGestureRecognizer
                     Tapped="DemonstrateSign"

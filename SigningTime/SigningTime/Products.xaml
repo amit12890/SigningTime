@@ -20,7 +20,7 @@
             <Label
                     HorizontalOptions="CenterAndExpand"
                     Text="Visit us online!"
-                    FontSize="Large"
+                    FontSize="30"
                     TextColor="#F17882"
                     XAlign="Center" >
                     <Label.FontFamily> 
@@ -32,7 +32,8 @@
             
                 <Label HorizontalOptions="Start"
                        VerticalOptions="CenterAndExpand" 
-                       TextColor="#222222" >
+                       TextColor="#222222"
+                       FontSize="Medium">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Visit us at " />
@@ -125,22 +126,18 @@
                             Tapped="TreeSchoolersLink"
                             NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
-                </Image>
-                
+                </Image>  
                 </Grid>
                 
-                
-   
+            
                 <BoxView BackgroundColor="#f48d91" 
                          HeightRequest="1"
                          Margin="0,20,0,20"/>
-                
-            
-                
+                    
                 <Label
                     HorizontalOptions="CenterAndExpand"
                     Text="Did you know research shows that signing:"
-                    FontSize="Large"
+                    FontSize="25"
                     TextColor="#F17882"
                     XAlign="Center" >
                     <Label.FontFamily> 

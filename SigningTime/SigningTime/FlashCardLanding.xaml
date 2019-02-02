@@ -17,10 +17,10 @@
         
 <!-- TITLE -->
             
-            <Label Grid.Row="0" Margin="30,20,30,30"
-                   Text="Deck selection."
+            <Label Grid.Row="0" Margin="30,20,30,20"
+                   Text="Deck selection"
                    XAlign="Center"
-                   FontSize="Large"
+                   FontSize="30"
                    TextColor="#F17882">
                     <Label.FontFamily> 
                        <OnPlatform x:TypeArguments="x:String"
